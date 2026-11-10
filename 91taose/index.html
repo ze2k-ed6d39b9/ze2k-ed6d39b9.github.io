@@ -1,0 +1,1362 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>91桃色 - 夜色情感故事合集 - 都市夜话内容平台</title>
+<meta name="description" content="91桃色聚合都市夜色情感故事、两性关系夜话与深夜电台合集，收录短篇故事、连载档案和主播节目条目，适合喜欢夜间阅读与情感话题的成年读者。">
+<meta name="keywords" content="夜色情感故事,都市夜话,深夜电台,情感连载,两性话题">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232a1220'/%3E%3Ccircle cx='32' cy='26' r='12' fill='none' stroke='%23e86a8a' stroke-width='4'/%3E%3Cpath d='M20 54c3-9 9-13 12-13s9 4 12 13' fill='none' stroke='%23e86a8a' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#140a12;
+  --bg-soft:#1d101a;
+  --panel:#241422;
+  --panel-2:#2c1927;
+  --line:#3d2436;
+  --line-soft:#31202c;
+  --text:#f1e4ea;
+  --text-2:#c8b2bd;
+  --text-3:#9a8290;
+  --brand:#e86a8a;
+  --brand-deep:#b8405f;
+  --accent:#f0b26b;
+  --accent-2:#8f7bd6;
+  --ok:#6fc4a0;
+  --radius:14px;
+  --radius-s:9px;
+  --shadow:0 12px 30px rgba(0,0,0,.38);
+  --sticky-h:104px;
+  --maxw:1320px;
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:
+    radial-gradient(1200px 500px at 85% -10%,rgba(232,106,138,.16),transparent 60%),
+    radial-gradient(900px 420px at 5% 0%,rgba(143,123,214,.14),transparent 55%),
+    var(--bg);
+  color:var(--text);font-family:var(--font);line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{margin:0;line-height:1.35;font-weight:700}
+p{margin:0 0 .9em}
+ul,ol{margin:0 0 .9em;padding-left:1.15em}
+li{margin:.28em 0}
+button{font-family:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+section[id],div[id],article[id]{scroll-margin-top:calc(var(--sticky-h) + 14px)}
+
+/* ---------- 吸顶公告条 + 页头 ---------- */
+.sticky-wrap{position:sticky;top:0;z-index:60}
+.notice-bar{
+  background:linear-gradient(90deg,#5c1c33,#2a1220 55%,#3a1b2c);
+  border-bottom:1px solid #4a2338;
+  font-size:13.5px;
+}
+.notice-inner{
+  max-width:var(--maxw);margin:0 auto;padding:8px 20px;
+  display:flex;gap:14px;align-items:center;flex-wrap:wrap;
+}
+.notice-tag{
+  flex:0 0 auto;background:var(--brand);color:#2a0b14;font-weight:700;
+  font-size:12px;padding:2px 9px;border-radius:999px;letter-spacing:.5px;
+}
+.notice-list{display:flex;gap:22px;flex-wrap:wrap;color:#f4dbe3;font-size:13.5px}
+.notice-list a{border-bottom:1px dashed rgba(244,219,227,.35);padding-bottom:1px}
+.notice-list a:hover{color:#fff;border-color:var(--accent)}
+.notice-time{margin-left:auto;color:#d9a9b8;font-size:12.5px;white-space:nowrap}
+
+.site-head{
+  background:rgba(20,10,18,.92);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.head-inner{
+  max-width:var(--maxw);margin:0 auto;padding:12px 20px;
+  display:flex;align-items:center;gap:22px;flex-wrap:wrap;
+}
+.brand{display:flex;align-items:center;gap:11px;flex:0 0 auto}
+.brand-mark{width:40px;height:40px;flex:0 0 auto}
+.brand-text{font-size:22px;font-weight:800;letter-spacing:1px;
+  background:linear-gradient(92deg,#ff9fb6,#e86a8a 45%,#f0b26b);
+  -webkit-background-clip:text;background-clip:text;color:transparent;white-space:nowrap}
+.brand-sub{font-size:11px;color:var(--text-3);letter-spacing:2.5px;margin-top:-4px}
+.head-nav{display:flex;gap:4px;flex-wrap:wrap;flex:1 1 auto}
+.head-nav a{
+  font-size:14px;color:var(--text-2);padding:6px 11px;border-radius:8px;white-space:nowrap;
+}
+.head-nav a:hover{background:var(--panel-2);color:var(--text)}
+.head-search{display:flex;align-items:center;gap:8px;flex:0 1 250px}
+.head-search input{
+  width:100%;background:var(--panel);border:1px solid var(--line);color:var(--text);
+  border-radius:999px;padding:8px 14px;font-size:13.5px;
+}
+.head-search input::placeholder{color:var(--text-3)}
+.head-search input:focus{border-color:var(--brand);outline:none}
+.head-quick{display:flex;gap:8px;flex:0 0 auto}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:6px;
+  border-radius:999px;padding:8px 16px;font-size:13.5px;font-weight:600;
+  border:1px solid transparent;cursor:pointer;transition:.18s;
+}
+.btn-primary{background:linear-gradient(96deg,var(--brand),#c2486a);color:#2a0b14}
+.btn-primary:hover{filter:brightness(1.08)}
+.btn-ghost{background:transparent;border-color:var(--line);color:var(--text-2)}
+.btn-ghost:hover{border-color:var(--brand);color:var(--text)}
+
+/* ---------- 首屏 ---------- */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line-soft)}
+.hero-inner{
+  max-width:var(--maxw);margin:0 auto;padding:46px 20px 40px;
+  display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:40px;align-items:center;
+}
+.hero-kicker{
+  display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:2px;
+  color:var(--accent);border:1px solid rgba(240,178,107,.35);border-radius:999px;padding:4px 13px;margin-bottom:18px;
+}
+.hero h1{
+  font-size:clamp(34px,4.6vw,54px);letter-spacing:2px;margin-bottom:16px;
+  background:linear-gradient(100deg,#fff0f5,#ffb3c6 40%,#e86a8a 70%,#f0b26b);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero-lead{font-size:15.5px;color:var(--text-2);max-width:44em;margin-bottom:22px}
+.hero-tags{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:26px}
+.hero-tags a{
+  font-size:13px;color:var(--text-2);background:var(--panel);border:1px solid var(--line);
+  padding:5px 13px;border-radius:999px;
+}
+.hero-tags a:hover{border-color:var(--brand);color:var(--text)}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero-stats{display:flex;gap:28px;margin-top:30px;flex-wrap:wrap}
+.hero-stats div{font-size:12.5px;color:var(--text-3)}
+.hero-stats strong{display:block;font-size:22px;color:var(--text);font-weight:800;letter-spacing:.5px}
+.hero-visual{position:relative;min-height:300px}
+.hero-visual svg{width:100%;height:auto;display:block}
+.hero-note{
+  position:absolute;right:6px;bottom:2px;font-size:12px;color:var(--text-3);
+  background:rgba(20,10,18,.7);padding:5px 12px;border-radius:999px;border:1px solid var(--line);
+}
+
+/* ---------- 布局：三栏门户 ---------- */
+.layout{
+  max-width:var(--maxw);margin:0 auto;padding:30px 20px 10px;
+  display:grid;grid-template-columns:176px minmax(0,1fr) 258px;gap:26px;align-items:start;
+}
+.col-left,.col-right{position:sticky;top:calc(var(--sticky-h) + 18px)}
+.side-card{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:14px 15px;margin-bottom:16px;
+}
+.side-title{
+  font-size:13px;letter-spacing:1.5px;color:var(--accent);text-transform:uppercase;
+  margin-bottom:10px;font-weight:700;
+}
+.chan-nav{list-style:none;padding:0;margin:0}
+.chan-nav li{margin:0}
+.chan-nav a{
+  display:flex;justify-content:space-between;align-items:center;gap:6px;
+  font-size:13.5px;color:var(--text-2);padding:7px 9px;border-radius:8px;
+}
+.chan-nav a:hover{background:var(--panel-2);color:var(--text)}
+.chan-nav a span{font-size:11.5px;color:var(--text-3)}
+
+.rank-list{list-style:none;padding:0;margin:0;counter-reset:rk}
+.rank-list li{
+  counter-increment:rk;display:flex;gap:10px;align-items:flex-start;
+  padding:8px 0;border-bottom:1px dashed var(--line-soft);font-size:13.5px;
+}
+.rank-list li:last-child{border-bottom:0}
+.rank-list li::before{
+  content:counter(rk);flex:0 0 20px;height:20px;line-height:20px;text-align:center;
+  font-size:11px;font-weight:700;border-radius:6px;background:var(--panel-2);color:var(--text-3);
+}
+.rank-list li:nth-child(-n+3)::before{background:linear-gradient(120deg,var(--brand),#b8405f);color:#2a0b14}
+.rank-list b{display:block;font-weight:600;color:var(--text);font-size:13.5px;line-height:1.5}
+.rank-list small{color:var(--text-3);font-size:11.5px}
+.update-feed{list-style:none;padding:0;margin:0;font-size:13px}
+.update-feed li{padding:7px 0;border-bottom:1px dashed var(--line-soft);color:var(--text-2)}
+.update-feed li:last-child{border-bottom:0}
+.update-feed time{display:block;font-size:11.5px;color:var(--text-3);margin-top:1px}
+
+/* ---------- 通用板块 ---------- */
+.panel{
+  background:linear-gradient(180deg,var(--panel),#201220);
+  border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px 24px 22px;margin-bottom:26px;box-shadow:var(--shadow);
+}
+.sec-head{display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap;margin-bottom:6px}
+.sec-head h2{font-size:21px;letter-spacing:.6px}
+.sec-head h2 em{font-style:normal;color:var(--brand)}
+.sec-sub{font-size:13px;color:var(--text-3);margin-bottom:18px}
+.sec-more{margin-left:auto;font-size:13px;color:var(--accent)}
+.sec-more:hover{text-decoration:underline}
+
+.overview p{color:var(--text-2);font-size:14.6px}
+.overview p strong{color:var(--text)}
+
+/* 精选卡片 */
+.card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.card{
+  background:var(--panel-2);border:1px solid var(--line-soft);border-radius:var(--radius-s);
+  overflow:hidden;display:flex;flex-direction:column;transition:.18s;
+}
+.card:hover{border-color:var(--brand-deep);transform:translateY(-2px)}
+.card-cover{position:relative;aspect-ratio:4/3;overflow:hidden;background:#1a0e17}
+.card-cover img{width:100%;height:100%;object-fit:cover;opacity:.9}
+.card-badge{
+  position:absolute;left:9px;top:9px;font-size:11px;font-weight:700;
+  background:rgba(20,10,18,.82);color:var(--accent);border:1px solid rgba(240,178,107,.4);
+  padding:2px 9px;border-radius:999px;
+}
+.card-body{padding:13px 14px 15px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card-body h3{font-size:15.5px;line-height:1.5}
+.card-desc{font-size:13px;color:var(--text-2);flex:1}
+.tag-row{display:flex;gap:6px;flex-wrap:wrap}
+.tag{
+  font-size:11.5px;color:var(--text-2);background:#331d2c;border:1px solid var(--line);
+  padding:1px 8px;border-radius:999px;white-space:nowrap;
+}
+.tag.hot{color:var(--brand);border-color:rgba(232,106,138,.4)}
+.card-meta{display:flex;gap:12px;font-size:11.8px;color:var(--text-3);border-top:1px dashed var(--line-soft);padding-top:8px}
+
+/* 最新更新列表 */
+.upd-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 26px}
+.upd-list li{
+  display:flex;gap:12px;align-items:flex-start;padding:11px 0;border-bottom:1px dashed var(--line-soft);
+}
+.upd-list li:nth-last-child(-n+2){border-bottom:0}
+.upd-dot{flex:0 0 8px;height:8px;border-radius:50%;background:var(--brand);margin-top:9px}
+.upd-dot.new{background:var(--ok);box-shadow:0 0 0 3px rgba(111,196,160,.16)}
+.upd-main b{font-size:14px;font-weight:600;display:block;line-height:1.5}
+.upd-main span{font-size:12.8px;color:var(--text-2)}
+.upd-main time{display:block;font-size:11.5px;color:var(--text-3);margin-top:2px}
+
+/* 分类入口 */
+.cat-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.cat{
+  display:block;padding:14px 13px;border-radius:var(--radius-s);
+  background:var(--panel-2);border:1px solid var(--line-soft);transition:.16s;
+}
+.cat:hover{border-color:var(--brand);background:#301a29}
+.cat b{display:block;font-size:15px;margin-bottom:3px}
+.cat span{font-size:12.3px;color:var(--text-3)}
+.cat em{font-style:normal;display:inline-block;margin-top:8px;font-size:11.5px;color:var(--accent)}
+
+/* 深度解析 */
+.deep h3{font-size:17px;margin:22px 0 8px;color:#ffd9e4;letter-spacing:.4px}
+.deep h3:first-of-type{margin-top:6px}
+.deep p{font-size:14.6px;color:var(--text-2)}
+.deep ul,.deep ol{color:var(--text-2);font-size:14.4px}
+.deep li strong{color:var(--text)}
+.deep-quote{
+  border-left:3px solid var(--brand);background:#2a1622;border-radius:0 var(--radius-s) var(--radius-s) 0;
+  padding:12px 16px;font-size:14px;color:#f0d3dc;margin:16px 0;
+}
+.compare{width:100%;border-collapse:collapse;font-size:13.6px;margin:12px 0 4px}
+.compare th,.compare td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}
+.compare th{background:#2f1a28;color:var(--accent);font-weight:700}
+.compare td{color:var(--text-2)}
+
+/* 体验指南：编号步骤 */
+.steps{list-style:none;padding:0;margin:0;counter-reset:st}
+.steps li{
+  counter-increment:st;position:relative;padding:0 0 18px 46px;border-left:1px dashed var(--line);
+  margin-left:14px;
+}
+.steps li:last-child{border-left-color:transparent;padding-bottom:0}
+.steps li::before{
+  content:counter(st);position:absolute;left:-15px;top:0;width:30px;height:30px;line-height:30px;
+  text-align:center;border-radius:50%;background:linear-gradient(120deg,var(--brand),#a83a58);
+  color:#2a0b14;font-weight:800;font-size:13.5px;
+}
+.steps b{display:block;font-size:15px;margin-bottom:3px}
+.steps p{font-size:14px;color:var(--text-2);margin:0}
+
+/* FAQ */
+.faq details{
+  border:1px solid var(--line);border-radius:var(--radius-s);background:var(--panel-2);
+  padding:0;margin-bottom:10px;overflow:hidden;
+}
+.faq summary{
+  cursor:pointer;padding:13px 16px;font-size:14.8px;font-weight:600;list-style:none;
+  display:flex;justify-content:space-between;gap:12px;align-items:center;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--brand);font-size:19px;font-weight:700;line-height:1}
+.faq details[open] summary::after{content:"–"}
+.faq details[open] summary{color:#ffd9e4}
+.faq .faq-a{padding:0 16px 14px;font-size:14px;color:var(--text-2);border-top:1px dashed var(--line-soft);padding-top:12px;margin:0 16px 14px}
+
+/* 评论 */
+.cmt-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.cmt{
+  background:var(--panel-2);border:1px solid var(--line-soft);border-radius:var(--radius-s);
+  padding:13px 15px;font-size:13.6px;color:var(--text-2);
+}
+.cmt-head{display:flex;align-items:center;gap:9px;margin-bottom:6px}
+.avatar{
+  width:28px;height:28px;border-radius:50%;flex:0 0 auto;
+  display:grid;place-items:center;font-size:12px;font-weight:700;color:#2a0b14;
+  background:linear-gradient(130deg,#f0b26b,#e86a8a);
+}
+.cmt-head b{font-size:13.5px;color:var(--text)}
+.cmt-head time{margin-left:auto;font-size:11.5px;color:var(--text-3)}
+.cmt-ref{font-size:12px;color:var(--accent);margin-bottom:4px}
+.cmt-ref::before{content:"评论《";}
+.cmt-ref::after{content:"》";}
+
+/* 资讯 */
+.news-list{display:grid;gap:14px}
+.news-item{display:grid;grid-template-columns:132px minmax(0,1fr);gap:14px;align-items:start;
+  padding-bottom:14px;border-bottom:1px dashed var(--line-soft)}
+.news-item:last-child{border-bottom:0;padding-bottom:0}
+.news-item img{width:100%;height:88px;object-fit:cover;border-radius:var(--radius-s);border:1px solid var(--line)}
+.news-item h3{font-size:15px;margin-bottom:4px}
+.news-item h3 a:hover{color:var(--brand)}
+.news-item time{font-size:11.8px;color:var(--text-3);display:block;margin-bottom:4px}
+.news-item p{font-size:13.4px;color:var(--text-2);margin:0}
+
+/* 相关推荐 标签索引 */
+.rel-tags{display:flex;flex-wrap:wrap;gap:10px}
+.rel-tags a{
+  font-size:13.5px;padding:7px 15px;border-radius:999px;background:var(--panel-2);
+  border:1px solid var(--line);color:var(--text-2);
+}
+.rel-tags a:hover{border-color:var(--accent);color:var(--accent)}
+.rel-tags a small{color:var(--text-3);margin-left:6px;font-size:11.5px}
+
+/* 时间线 */
+.timeline{list-style:none;padding:0;margin:0}
+.timeline li{position:relative;padding:0 0 18px 26px;border-left:1px solid var(--line);margin-left:6px}
+.timeline li:last-child{padding-bottom:0;border-left-color:transparent}
+.timeline li::before{
+  content:"";position:absolute;left:-5px;top:7px;width:9px;height:9px;border-radius:50%;
+  background:var(--brand);box-shadow:0 0 0 3px rgba(232,106,138,.18);
+}
+.timeline time{font-size:11.8px;color:var(--accent);letter-spacing:.5px}
+.timeline b{display:block;font-size:14.2px;margin:2px 0}
+.timeline span{font-size:13.2px;color:var(--text-2)}
+
+/* 检索无结果 */
+#searchEmpty{
+  display:none;padding:14px 16px;border:1px dashed var(--line);border-radius:var(--radius-s);
+  color:var(--text-3);font-size:13.6px;margin-top:12px;
+}
+
+/* 页尾 */
+.site-foot{background:#100810;border-top:1px solid var(--line);margin-top:30px}
+.foot-inner{max-width:var(--maxw);margin:0 auto;padding:34px 20px 22px}
+.foot-top{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:28px}
+.foot-brand{display:flex;align-items:center;gap:11px;margin-bottom:12px}
+.foot-brand .brand-text{font-size:19px}
+.foot-about{font-size:13.2px;color:var(--text-3);max-width:34em}
+.foot-col h4{font-size:13.5px;color:var(--accent);letter-spacing:1px;margin-bottom:10px}
+.foot-col a{display:block;font-size:13.2px;color:var(--text-2);padding:3px 0}
+.foot-col a:hover{color:var(--brand)}
+.foot-bottom{
+  border-top:1px solid var(--line-soft);margin-top:26px;padding-top:16px;
+  display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between;
+  font-size:12.2px;color:var(--text-3);
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:1024px){
+  .layout{grid-template-columns:minmax(0,1fr) 250px;gap:22px}
+  .col-left{display:none}
+  .hero-inner{grid-template-columns:1fr;gap:26px}
+  .hero-visual{min-height:0;max-width:520px}
+  .card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .foot-top{grid-template-columns:1fr 1fr}
+  .head-nav{order:3;width:100%;flex:1 1 100%;overflow-x:auto;flex-wrap:nowrap;padding-bottom:2px}
+  .head-search{flex:1 1 200px}
+}
+@media (max-width:740px){
+  :root{--sticky-h:112px}
+  .layout{grid-template-columns:1fr;padding:20px 14px 6px}
+  .col-right{position:static;order:3}
+  .col-right .side-card{margin-bottom:14px}
+  .head-inner{padding:10px 14px;gap:12px}
+  .head-quick{display:none}
+  .notice-time{display:none}
+  .panel{padding:18px 15px}
+  .card-grid{grid-template-columns:1fr}
+  .upd-list{grid-template-columns:1fr}
+  .upd-list li:nth-last-child(-n+2){border-bottom:1px dashed var(--line-soft)}
+  .upd-list li:last-child{border-bottom:0}
+  .cat-grid{grid-template-columns:1fr 1fr}
+  .cmt-grid{grid-template-columns:1fr}
+  .news-item{grid-template-columns:1fr}
+  .news-item img{height:150px}
+  .foot-top{grid-template-columns:1fr}
+  .compare{font-size:12.6px}
+  .compare th,.compare td{padding:7px 8px}
+  .hero h1{font-size:32px}
+  .hero-stats{gap:18px}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 吸顶：公告条 + 页头 -->
+<div class="sticky-wrap">
+  <div class="notice-bar">
+    <div class="notice-inner">
+      <span class="notice-tag">更新</span>
+      <div class="notice-list">
+        <a href="/#upd">《雨夜出租屋》第 14 章已上线</a>
+        <a href="/#upd">深夜电台《凌晨两点半》第 62 期更新</a>
+        <a href="/#upd">本周新增 9 篇夜色短篇</a>
+      </div>
+      <span class="notice-time">2026-11-08 09:30</span>
+    </div>
+  </div>
+
+  <header class="site-head">
+    <div class="head-inner">
+      <a class="brand" href="/#top" aria-label="91桃色 首页">
+        <svg class="brand-mark" viewBox="0 0 64 64" role="img" aria-label="91桃色 标志图形">
+          <defs>
+            <linearGradient id="bm" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#ff9fb6"/>
+              <stop offset=".55" stop-color="#e86a8a"/>
+              <stop offset="1" stop-color="#f0b26b"/>
+            </linearGradient>
+          </defs>
+          <rect width="64" height="64" rx="16" fill="#241422"/>
+          <circle cx="32" cy="25" r="11.5" fill="none" stroke="url(#bm)" stroke-width="3.6"/>
+          <path d="M20 53c2.6-9.4 8.6-13.6 12-13.6S41.4 43.6 44 53" fill="none" stroke="url(#bm)" stroke-width="3.6" stroke-linecap="round"/>
+          <circle cx="46" cy="17" r="3.2" fill="#f0b26b"/>
+        </svg>
+        <span>
+          <span class="brand-text">91桃色</span>
+          <span class="brand-sub">NIGHT STORIES</span>
+        </span>
+      </a>
+
+      <nav class="head-nav" aria-label="主题导航">
+        <a href="/#deep">夜色深读</a>
+        <a href="/#picks">故事精选</a>
+        <a href="/#upd">更新动态</a>
+        <a href="/#cats">频道分类</a>
+        <a href="/#faq">常见问答</a>
+        <a href="/#news">夜话资讯</a>
+      </nav>
+
+      <div class="head-search">
+        <label for="siteSearch" style="position:absolute;left:-9999px">站内查找故事条目</label>
+        <input id="siteSearch" type="search" placeholder="查找故事、电台、栏目…" autocomplete="off">
+      </div>
+
+      <div class="head-quick">
+        <a class="btn btn-ghost" href="/#upd">今日更新</a>
+        <a class="btn btn-primary" href="/#picks">开始夜读</a>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero" aria-labelledby="heroTitle">
+    <div class="hero-inner">
+      <div>
+        <span class="hero-kicker">都市 · 夜色 · 情感叙事聚合</span>
+        <h1 id="heroTitle">91桃色</h1>
+        <p class="hero-lead">汇聚都市夜色情感短篇、连载档案与深夜电台节目，覆盖合租日常、旧情重逢、加班夜归、凌晨独白等具体题材，按条目与期数整理，方便夜读时按类型挑到想看的那一篇。</p>
+        <div class="hero-tags">
+          <a href="/#picks">合租日常</a>
+          <a href="/#picks">旧情重逢</a>
+          <a href="/#picks">深夜电台</a>
+          <a href="/#picks">凌晨独白</a>
+          <a href="/#cats">情感连载</a>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/#picks">看今日精选条目</a>
+          <a class="btn btn-ghost" href="/#guide">夜读入门顺序</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>1,286</strong>收录故事条目</div>
+          <div><strong>62</strong>深夜电台期数</div>
+          <div><strong>9</strong>今日新增</div>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 460 320" role="img" aria-label="夜色城市窗景与电台波形插画">
+          <defs>
+            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#2b1430"/>
+              <stop offset="1" stop-color="#160b16"/>
+            </linearGradient>
+            <linearGradient id="win" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#f0b26b"/>
+              <stop offset="1" stop-color="#e86a8a"/>
+            </linearGradient>
+            <linearGradient id="wave" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#e86a8a" stop-opacity=".1"/>
+              <stop offset=".5" stop-color="#f0b26b"/>
+              <stop offset="1" stop-color="#8f7bd6" stop-opacity=".2"/>
+            </linearGradient>
+          </defs>
+          <rect width="460" height="320" rx="20" fill="url(#sky)"/>
+          <circle cx="368" cy="66" r="34" fill="#ffd9e4" opacity=".16"/>
+          <circle cx="368" cy="66" r="21" fill="#ffd9e4" opacity=".32"/>
+          <g opacity=".92">
+            <rect x="26" y="150" width="52" height="150" rx="4" fill="#221327"/>
+            <rect x="86" y="112" width="62" height="188" rx="4" fill="#2a1830"/>
+            <rect x="156" y="176" width="46" height="124" rx="4" fill="#221327"/>
+            <rect x="210" y="94" width="70" height="206" rx="4" fill="#2d1a33"/>
+            <rect x="288" y="140" width="54" height="160" rx="4" fill="#241530"/>
+            <rect x="350" y="182" width="84" height="118" rx="4" fill="#221327"/>
+          </g>
+          <g fill="url(#win)" opacity=".85">
+            <rect x="96" y="126" width="10" height="12" rx="2"/>
+            <rect x="116" y="152" width="10" height="12" rx="2"/>
+            <rect x="222" y="112" width="11" height="13" rx="2"/>
+            <rect x="246" y="146" width="11" height="13" rx="2"/>
+            <rect x="300" y="160" width="10" height="12" rx="2"/>
+            <rect x="366" y="200" width="11" height="13" rx="2"/>
+            <rect x="396" y="232" width="11" height="13" rx="2"/>
+            <rect x="40" y="170" width="9" height="11" rx="2"/>
+          </g>
+          <g stroke="url(#wave)" stroke-width="3" fill="none" stroke-linecap="round">
+            <path d="M40 268c22-26 34 14 56-8s30 16 52-6 30 18 52-4 30 14 52-8 30 16 52-6 30 12 52-4" opacity=".9"/>
+          </g>
+          <g fill="#e86a8a" opacity=".7">
+            <circle cx="96" cy="260" r="3"/><circle cx="200" cy="264" r="3"/><circle cx="304" cy="262" r="3"/><circle cx="408" cy="258" r="3"/>
+          </g>
+        </svg>
+        <span class="hero-note">夜色窗景 · 电台波形示意</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 三栏布局 -->
+  <div class="layout">
+
+    <!-- 左：频道索引 -->
+    <aside class="col-left" aria-label="频道索引">
+      <div class="side-card">
+        <p class="side-title">频道索引</p>
+        <ul class="chan-nav">
+          <li><a href="/#picks">都市合租<span>214</span></a></li>
+          <li><a href="/#picks">旧情重逢<span>186</span></a></li>
+          <li><a href="/#picks">加班夜归<span>143</span></a></li>
+          <li><a href="/#picks">深夜电台<span>62</span></a></li>
+          <li><a href="/#picks">凌晨独白<span>98</span></a></li>
+          <li><a href="/#cats">情感连载<span>77</span></a></li>
+          <li><a href="/#cats">城市漫游<span>121</span></a></li>
+          <li><a href="/#cats">旅店夜话<span>54</span></a></li>
+          <li><a href="/#cats">书信体<span>39</span></a></li>
+          <li><a href="/#cats">短篇合集<span>168</span></a></li>
+        </ul>
+      </div>
+      <div class="side-card">
+        <p class="side-title">夜读时长</p>
+        <ul class="chan-nav">
+          <li><a href="/#guide">10 分钟内<span>312</span></a></li>
+          <li><a href="/#guide">20—40 分钟<span>486</span></a></li>
+          <li><a href="/#guide">长篇连载<span>77</span></a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- 中：主内容 -->
+    <div class="col-main">
+
+      <!-- 板块1：主题领域概览 -->
+      <section class="panel overview" id="intro" aria-labelledby="introH">
+        <div class="sec-head">
+          <h2 id="introH">夜色情感故事包含哪些具体方向</h2>
+        </div>
+        <p class="sec-sub">从题材、体裁到收听方式，先把这片夜色里的内容摸清楚</p>
+        <p><strong>都市夜色题材</strong>是一类以夜晚为时间背景、以城市生活为空间背景的叙事内容。它不追求宏大设定，主要写人与人之间在夜里发生的具体关系变化：合租室友之间的边界试探、旧同学在便利店门口的重逢、加班到末班地铁后的独白、旅店走廊里的一次搭话。这些场景的共同点是情绪密度高、时间跨度短，适合在一两个小时内读完或听完。</p>
+        <p>按体裁分，常见的有四种。<strong>短篇故事</strong>篇幅在三千到八千字，通常围绕一个夜晚、一次对话展开，结尾留有余味；<strong>情感连载</strong>以章节推进，人物关系在多个夜晚里逐步变化，适合连续追更；<strong>深夜电台</strong>是音频形态，主播以口述方式讲一个故事或读一封来信，适合通勤和睡前；<strong>书信体与独白体</strong>则用第一人称展开，节奏更慢，更接近情绪记录。</p>
+        <p>按题材分，读者搜索最多的几类是合租日常、旧情重逢、加班夜归、城市漫游、旅店夜话和凌晨独白。前两类重关系张力，第三类重生活质感，城市漫游偏向场景描写，旅店夜话常带悬疑色彩，凌晨独白最接近散文。不同题材的阅读门槛差别不小，短篇适合初次接触，连载需要投入连续时间，电台则可以在做别的事情时同时进行。</p>
+        <p>选择时可以先确认自己此刻想要的是<strong>情节推进</strong>还是<strong>情绪陪伴</strong>。想要情节，优先看连载和旅店夜话；想要陪伴，短篇与电台更合适。题材标签与时长标签结合使用，通常比只看热度更能挑到对味的一篇。</p>
+      </section>
+
+      <!-- 板块2：精选内容推荐 -->
+      <section class="panel" id="picks" aria-labelledby="picksH">
+        <div class="sec-head">
+          <h2 id="picksH">今日精选故事与电台条目</h2>
+          <a class="sec-more" href="/#upd">全部更新 →</a>
+        </div>
+        <p class="sec-sub">9 条可直接开始阅读或收听的条目，附类型与热度参考</p>
+
+        <div class="card-grid">
+
+          <article class="card">
+            <div class="card-cover">
+              <img src="https://picsum.photos/seed/taose-hezu-01/400/300" width="400" height="300" loading="lazy" alt="合租公寓夜灯下的客厅场景封面">
+              <span class="card-badge">连载 · 第14章</span>
+            </div>
+            <div class="card-body">
+              <h3>雨夜出租屋</h3>
+              <p class="card-desc">三室一厅的老房子里，两个原本只在厨房点头的租客因为一场停电坐到同一张沙发上。写的是边界怎么一点点被让开，节奏慢但每章都有推进。</p>
+              <div class="tag-row"><span class="tag hot">合租日常</span><span class="tag">都市</span><span class="tag">慢热</span></div>
+              <div class="card-meta"><span>热度 9.4</span><span>共 14 章</span><span>今日更新</span></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-cover">
+              <img src="https://picsum.photos/seed/taose-jiuqing-02/400/300" width="400" height="300" loading="lazy" alt="便利店门口夜晚重逢场景封面">
+              <span class="card-badge">短篇 · 6.2千字</span>
+            </div>
+            <div class="card-body">
+              <h3>便利店的第七年</h3>
+              <p class="card-desc">两个高中同学在同一个便利店夜班岗上重逢，七年没见，谁都没先提当年那件事。全篇只写一个班次的时间，对话密度高。</p>
+              <div class="tag-row"><span class="tag hot">旧情重逢</span><span class="tag">短篇</span><span class="tag">对话体</span></div>
+              <div class="card-meta"><span>热度 8.9</span><span>单篇完结</span><span>11-06</span></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-cover">
+              <img src="https://picsum.photos/seed/taose-diantai-03/400/300" width="400" height="300" loading="lazy" alt="深夜电台主播录音间封面">
+              <span class="card-badge">电台 · 第62期</span>
+            </div>
+            <div class="card-body">
+              <h3>凌晨两点半 · 第62期</h3>
+              <p class="card-desc">本期读三封听众来信，主题是“搬走之后还会不会想起那间屋子”。主播语速偏慢，适合睡前戴耳机听，全程约 38 分钟。</p>
+              <div class="tag-row"><span class="tag hot">深夜电台</span><span class="tag">来信</span><span class="tag">助眠</span></div>
+              <div class="card-meta"><span>播放 3.1万</span><span>38 分钟</span><span>今天 00:20</span></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-cover">
+              <img src="https://picsum.photos/seed/taose-jiaban-04/400/300" width="400" height="300" loading="lazy" alt="末班地铁车厢空座夜景封面">
+              <span class="card-badge">短篇 · 4.8千字</span>
+            </div>
+            <div class="card-body">
+              <h3>末班地铁的第十一站</h3>
+              <p class="card-desc">一个连续加班三个月的设计师在末班车上遇到每天同车厢的陌生人，两人从未说过话。整篇几乎没有对白，靠细节推进。</p>
+              <div class="tag-row"><span class="tag hot">加班夜归</span><span class="tag">城市</span><span class="tag">独白</span></div>
+              <div class="card-meta"><span>热度 8.5</span><span>单篇完结</span><span>11-04</span></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-cover">
+              <img src="https://picsum.photos/seed/taose-lvdian-05/400/300" width="400" height="300" loading="lazy" alt="老旅店走廊尽头灯光封面">
+              <span class="card-badge">连载 · 第8章</span>
+            </div>
+            <div class="card-body">
+              <h3>三楼尽头的房间</h3>
+              <p class="card-desc">旅店夜话类连载，前台登记簿上同一个名字连续出现七天。悬疑线不靠惊吓，靠时间和登记细节的错位，适合喜欢推理感的读者。</p>
+              <div class="tag-row"><span class="tag hot">旅店夜话</span><span class="tag">悬疑</span><span class="tag">连载</span></div>
+              <div class="card-meta"><span>热度 9.1</span><span>共 8 章</span><span>11-07</span></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-cover">
+              <img src="https://picsum.photos/seed/taose-shuxin-06/400/300" width="400" height="300" loading="lazy" alt="台灯下摊开的信纸与钢笔封面">
+              <span class="card-badge">书信体 · 12封</span>
+            </div>
+            <div class="card-body">
+              <h3>给北方写的十二封信</h3>
+              <p class="card-desc">十二封信按月份排列，收信人始终没有回信。每封 800 字左右，可单读也可连读，写异地关系里那种延迟感。</p>
+              <div class="tag-row"><span class="tag hot">书信体</span><span class="tag">异地</span><span class="tag">短章</span></div>
+              <div class="card-meta"><span>热度 8.2</span><span>12 封完结</span><span>11-03</span></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-cover">
+              <img src="https://picsum.photos/seed/taose-chengshi-07/400/300" width="400" height="300" loading="lazy" alt="深夜街道便利店招牌与雨伞封面">
+              <span class="card-badge">城市漫游 · 9篇</span>
+            </div>
+            <div class="card-body">
+              <h3>沿着环线走一整夜</h3>
+              <p class="card-desc">九篇各自独立的城市夜行记录，从高架桥下走到老码头。场景描写占七成，情节很淡，适合想找氛围感的读者。</p>
+              <div class="tag-row"><span class="tag hot">城市漫游</span><span class="tag">氛围</span><span class="tag">散文</span></div>
+              <div class="card-meta"><span>热度 7.8</span><span>9 篇</span><span>11-02</span></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-cover">
+              <img src="https://picsum.photos/seed/taose-lingchen-08/400/300" width="400" height="300" loading="lazy" alt="凌晨窗边单人沙发与台灯封面">
+              <span class="card-badge">独白 · 单篇</span>
+            </div>
+            <div class="card-body">
+              <h3>凌晨四点还醒着的人</h3>
+              <p class="card-desc">第一人称整夜独白，从关灯写到天亮，中间只接了一个电话。几乎没有外部事件，全靠语言节奏撑住，读完约二十分钟。</p>
+              <div class="tag-row"><span class="tag hot">凌晨独白</span><span class="tag">第一人称</span><span class="tag">慢节奏</span></div>
+              <div class="card-meta"><span>热度 8.7</span><span>单篇完结</span><span>11-05</span></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-cover">
+              <img src="https://picsum.photos/seed/taose-duanpian-09/400/300" width="400" height="300" loading="lazy" alt="旧式楼道声控灯夜拍封面">
+              <span class="card-badge">短篇合集 · 7则</span>
+            </div>
+            <div class="card-body">
+              <h3>楼道声控灯下的七则</h3>
+              <p class="card-desc">七则短故事共用一栋老居民楼作背景，每则不到两千字，人物互有交叉。适合睡前一次读两三则，不必按顺序。</p>
+              <div class="tag-row"><span class="tag hot">短篇合集</span><span class="tag">群像</span><span class="tag">邻里</span></div>
+              <div class="card-meta"><span>热度 8.3</span><span>7 则</span><span>11-01</span></div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- 板块3：最新更新 -->
+      <section class="panel" id="upd" aria-labelledby="updH">
+        <div class="sec-head">
+          <h2 id="updH">最新更新与今晚动态</h2>
+        </div>
+        <p class="sec-sub">2026 年 11 月 8 日前后的章节上线、节目排期与栏目变动</p>
+        <ul class="upd-list">
+          <li>
+            <span class="upd-dot new"></span>
+            <div class="upd-main">
+              <b>《雨夜出租屋》第 14 章</b>
+              <span>停电夜那场对话收尾，两人第一次明确提到搬走的事。</span>
+              <time>今天 09:30</time>
+            </div>
+          </li>
+          <li>
+            <span class="upd-dot new"></span>
+            <div class="upd-main">
+              <b>深夜电台《凌晨两点半》第 62 期</b>
+              <span>本期读三封关于搬家的来信，新增一段主播回信。</span>
+              <time>今天 00:20</time>
+            </div>
+          </li>
+          <li>
+            <span class="upd-dot"></span>
+            <div class="upd-main">
+              <b>《三楼尽头的房间》第 8 章</b>
+              <span>登记簿上第七个同名记录出现，前台换成了另一个人。</span>
+              <time>昨天 21:10</time>
+            </div>
+          </li>
+          <li>
+            <span class="upd-dot"></span>
+            <div class="upd-main">
+              <b>《便利店的第七年》上架短篇榜</b>
+              <span>单篇完结作品进入本周短篇热度前五。</span>
+              <time>昨天 18:40</time>
+            </div>
+          </li>
+          <li>
+            <span class="upd-dot"></span>
+            <div class="upd-main">
+              <b>「凌晨独白」频道新增 3 篇</b>
+              <span>本周投稿集中在校友会、夜班护士、搬家三个场景。</span>
+              <time>11 月 6 日</time>
+            </div>
+          </li>
+          <li>
+            <span class="upd-dot"></span>
+            <div class="upd-main">
+              <b>《末班地铁的第十一站》修订版</b>
+              <span>结尾两段重新改写，主线不变，补了一段站台描写。</span>
+              <time>11 月 4 日</time>
+            </div>
+          </li>
+          <li>
+            <span class="upd-dot"></span>
+            <div class="upd-main">
+              <b>《给北方写的十二封信》第 12 封</b>
+              <span>全篇完结，最后一封没有落款日期。</span>
+              <time>11 月 3 日</time>
+            </div>
+          </li>
+          <li>
+            <span class="upd-dot"></span>
+            <div class="upd-main">
+              <b>「城市漫游」栏目加入夜行地图</b>
+              <span>九篇记录按路线重新排序，可按地点跳读。</span>
+              <time>11 月 2 日</time>
+            </div>
+          </li>
+          <li>
+            <span class="upd-dot"></span>
+            <div class="upd-main">
+              <b>《楼道声控灯下的七则》合订</b>
+              <span>七则短故事合并为一册，补充了两处人物交叉说明。</span>
+              <time>11 月 1 日</time>
+            </div>
+          </li>
+          <li>
+            <span class="upd-dot"></span>
+            <div class="upd-main">
+              <b>电台《凌晨两点半》排期调整</b>
+              <span>11 月起改为每周六零点更新，时长放宽到 40 分钟。</span>
+              <time>10 月 30 日</time>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 板块4：分类入口 -->
+      <section class="panel" id="cats" aria-labelledby="catsH">
+        <div class="sec-head">
+          <h2 id="catsH">按题材分类找故事</h2>
+        </div>
+        <p class="sec-sub">八个常用题材入口，点击进入对应条目列表</p>
+        <div class="cat-grid">
+          <a class="cat" href="/#picks">
+            <b>合租日常</b>
+            <span>室友、边界、公共空间里的试探</span>
+            <em>214 条 →</em>
+          </a>
+          <a class="cat" href="/#picks">
+            <b>旧情重逢</b>
+            <span>多年后再见，话没说完的部分</span>
+            <em>186 条 →</em>
+          </a>
+          <a class="cat" href="/#picks">
+            <b>加班夜归</b>
+            <span>末班车、写字楼、深夜便利店</span>
+            <em>143 条 →</em>
+          </a>
+          <a class="cat" href="/#picks">
+            <b>深夜电台</b>
+            <span>口述故事、听众来信、助眠节目</span>
+            <em>62 期 →</em>
+          </a>
+          <a class="cat" href="/#picks">
+            <b>凌晨独白</b>
+            <span>第一人称整夜叙述，情绪记录</span>
+            <em>98 条 →</em>
+          </a>
+          <a class="cat" href="/#cats">
+            <b>旅店夜话</b>
+            <span>走廊、登记簿、房间号里的悬疑</span>
+            <em>54 条 →</em>
+          </a>
+          <a class="cat" href="/#cats">
+            <b>书信体</b>
+            <span>没有回信的一侧，延迟的时间感</span>
+            <em>39 条 →</em>
+          </a>
+          <a class="cat" href="/#cats">
+            <b>城市漫游</b>
+            <span>夜行路线、街景、氛围散文</span>
+            <em>121 条 →</em>
+          </a>
+        </div>
+      </section>
+
+      <!-- 板块5：深度解析 -->
+      <section class="panel deep" id="deep" aria-labelledby="deepH">
+        <div class="sec-head">
+          <h2 id="deepH">夜读深读：四类夜色题材的差异与取舍</h2>
+        </div>
+        <p class="sec-sub">同是夜晚背景，短篇、连载、电台、独白的读法完全不同</p>
+
+        <h3>短篇：一个夜晚撑起一个完整弧线</h3>
+        <p>短篇故事的核心结构通常只有一个夜晚、一到两个人物、一次关键对话。《便利店的第七年》把七年的空白压缩在一个夜班里，靠对话逐步释放信息；《末班地铁的第十一站》则几乎没有对白，用同车厢的固定距离维持张力。判断一篇短篇值不值得读完，可以看前八百字有没有建立起一个具体的场景约束——时间、地点、人物关系至少有两项是明确的。</p>
+        <p>短篇的优势是进入快、退出也快，适合碎片时间。劣势是人物关系往往来不及铺满，如果读者需要长线的情感投入，短篇容易显得单薄。选择时可注意标签里的“单篇完结”，避免误入连载第一章。</p>
+
+        <h3>连载：跨夜晚推进的关系变化</h3>
+        <p>情感连载把同样的夜色拆成多个夜晚，每一章负责一次关系状态的改变。《雨夜出租屋》前十章都在写公共空间的使用权，第十四章才把搬走这件事摆到台面上；《三楼尽头的房间》则用登记簿上的重复记录推进悬疑，每章揭示一个细节。连载对更新的依赖度高，追更体验与一次读完差异明显。</p>
+        <ul>
+          <li><strong>追更型</strong>：每章 3000 字上下，章末留钩子，适合每周固定时间读。</li>
+          <li><strong>攒读型</strong>：章节间联系紧密，一次读三到五章更连贯，适合周末。</li>
+          <li><strong>单元型</strong>：每章可独立成篇，人物固定但事件独立，随时可进。</li>
+        </ul>
+
+        <h3>电台：声音带来的节奏差异</h3>
+        <p>深夜电台与文字阅读最大的不同在于节奏由主播控制。《凌晨两点半》每期 35 到 40 分钟，开场有固定的环境音，中段读书信，结尾有一段主播自己的回应。听众无法跳读，只能跟着走，这反而适合睡前或通勤这类注意力不集中的场景。选择时可以看单期时长和是否有来信环节，来信类节目通常比纯讲述更松散，也更容易听睡着。</p>
+
+        <h3>独白与书信体：最接近情绪记录</h3>
+        <p>凌晨独白和书信体都属于第一人称强文本，情节很淡，主要靠语言本身的密度。《凌晨四点还醒着的人》中间只接了一个电话，其余全是自我陈述；《给北方写的十二封信》每封 800 字，收信人始终缺席，延迟感是它的核心。这类内容对读者的状态要求更高——疲惫时读容易失去耐心，清醒时读反而能接住细节。</p>
+
+        <div class="deep-quote">四类内容并不是高低关系，而是不同的时间投入方式：短篇给一个夜晚，连载给一周，电台给一段通勤，独白给一个睡不着的小时。</div>
+
+        <h3>横向对照</h3>
+        <table class="compare">
+          <thead>
+            <tr><th>类型</th><th>单次时长</th><th>关系推进</th><th>适合场景</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>短篇故事</td><td>20—40 分钟</td><td>单次完成</td><td>睡前、午休</td></tr>
+            <tr><td>情感连载</td><td>每章 15 分钟</td><td>跨章累积</td><td>固定追更、周末攒读</td></tr>
+            <tr><td>深夜电台</td><td>35—40 分钟</td><td>单期独立</td><td>通勤、助眠</td></tr>
+            <tr><td>书信 / 独白</td><td>10—25 分钟</td><td>情绪累积</td><td>深夜清醒时段</td></tr>
+          </tbody>
+        </table>
+        <p>对照之后再看题材标签会更有效：想快速获得一个完整故事，选短篇里的合租或重逢题材；想持续跟一个人物的变化，选单元型以外的连载；只想听点声音，直接进电台栏目，不必先看文字简介。</p>
+      </section>
+
+      <!-- 板块6：体验指南 -->
+      <section class="panel" id="guide" aria-labelledby="guideH">
+        <div class="sec-head">
+          <h2 id="guideH">夜读入门：从哪里开始，怎么判断值得投入</h2>
+        </div>
+        <p class="sec-sub">按顺序挑，比随手点开更省时间</p>
+        <ol class="steps">
+          <li>
+            <b>先确定这一晚有多少时间</b>
+            <p>十分钟以内选短篇或独白，半小时以上可以进电台或连载前两章。时间不够却点开长篇，通常读不到关系变化的那一章就放下了。</p>
+          </li>
+          <li>
+            <b>再确定想要情节还是氛围</b>
+            <p>要情节看旅店夜话与合租连载，事件密度高；要氛围看城市漫游与凌晨独白，事件少但语言密度高。两者混着找，容易觉得“什么都差一点”。</p>
+          </li>
+          <li>
+            <b>用前八百字做一次判断</b>
+            <p>短篇看前八百字是否建立场景约束，连载看第一章是否交代清楚人物关系和当前矛盾，电台听前五分钟是否适应主播语速。三点都过关再继续。</p>
+          </li>
+          <li>
+            <b>同类条目横向比较时看差异点</b>
+            <p>同样是旧情重逢，《便利店的第七年》靠对话推进，另一类作品可能靠回忆插叙。挑与自己当下状态更接近的那一种，比追热度更有效。</p>
+          </li>
+          <li>
+            <b>连载设定退出线</b>
+            <p>读到第五章仍没有明确的关系变化，或者每章都在重复同一场景，可以直接弃读。夜色题材的连载密度差异很大，及时止损比硬追更划算。</p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- 板块7：FAQ -->
+      <section class="panel faq" id="faq" aria-labelledby="faqH">
+        <div class="sec-head">
+          <h2 id="faqH">关于夜色情感故事的常见问题</h2>
+        </div>
+        <p class="sec-sub">六个读者最常问到的具体问题</p>
+
+        <details>
+          <summary>都市夜色题材和一般言情小说有什么区别？</summary>
+          <div class="faq-a">主要差别在时间和空间约束。夜色题材通常把故事压缩在一个或几个夜晚、一个具体城市空间里，人物关系的变化幅度小但密度高；一般言情小说时间跨度更长，事件更多。前者更接近片段式叙事，后者更接近完整成长线。</div>
+        </details>
+
+        <details>
+          <summary>深夜电台一般多久更新一期？</summary>
+          <div class="faq-a">以《凌晨两点半》为例，2026 年 11 月起改为每周六零点更新，单期 35 到 40 分钟。不同节目排期差别较大，订阅前先看栏目页标注的更新周期，比按印象判断更可靠。</div>
+        </details>
+
+        <details>
+          <summary>第一次接触夜色题材，从哪一篇开始比较好？</summary>
+          <div class="faq-a">建议从单篇完结的短篇入手，比如《便利店的第七年》或《末班地铁的第十一站》，篇幅在五千字上下，一次能读完。读完再决定是继续看同题材短篇，还是进入《雨夜出租屋》这类连载。</div>
+        </details>
+
+        <details>
+          <summary>旅店夜话算悬疑还是情感？</summary>
+          <div class="faq-a">多数作品两者兼有。《三楼尽头的房间》用登记簿异常推进悬疑线，但人物动机仍落在关系与记忆上。判断方法看结尾落点：如果揭示的是事件真相，偏悬疑；如果揭示的是人物为什么留在原地，偏情感。</div>
+        </details>
+
+        <details>
+          <summary>连载和短篇合集，哪种更适合睡前读？</summary>
+          <div class="faq-a">短篇合集更适合。连载每章结尾常留钩子，容易越读越精神；短篇合集如《楼道声控灯下的七则》每则独立，读完一则可以自然停下。如果确实想追连载，建议把阅读时间放在白天。</div>
+        </details>
+
+        <details>
+          <summary>书信体和独白体的阅读门槛高吗？</summary>
+          <div class="faq-a">比短篇略高，因为几乎没有外部事件推动，全靠语言节奏。判断自己是否适合：能否接受一整段没有对话的叙述。如果能，从《给北方写的十二封信》单封试读，每封 800 字左右，试错成本低。</div>
+        </details>
+      </section>
+
+      <!-- 板块8：用户评论 -->
+      <section class="panel" id="comments" aria-labelledby="cmtH">
+        <div class="sec-head">
+          <h2 id="cmtH">读者评论</h2>
+        </div>
+        <p class="sec-sub">来自条目页的 16 条留言，围绕具体故事与节目</p>
+        <div class="cmt-grid">
+
+          <div class="cmt">
+            <div class="cmt-head"><span class="avatar">柚</span><b>柚子汽水</b><time>今天 10:12</time></div>
+            <div class="cmt-ref">雨夜出租屋</div>
+            第十四章那句“你要是搬走，客厅的灯我就不留了”写得真好，前面十几章的铺垫全在这里收住了。
+          </div>
+
+          <div class="cmt">
+            <div class="cmt-head"><span class="avatar">夜</span><b>夜班三点</b><time>今天 08:47</time></div>
+            <div class="cmt-ref">凌晨两点半 第62期</div>
+            这期来信讲搬家，听到第二封的时候正好在收拾行李，有点顶不住。主播回信那段比来信本身更克制。
+          </div>
+
+          <div class="cmt">
+            <div class="cmt-head"><span class="avatar">陈</span><b>陈屿</b><time>昨天 23:05</time></div>
+            <div class="cmt-ref">便利店的第七年</div>
+            全程对话但一点不闷，两个人都在绕开当年那件事，绕得越久越难受。结尾没有和解，反而更真实。
+          </div>
+
+          <div class="cmt">
+            <div class="cmt-head"><span class="avatar">阿</span><b>阿棠不是糖</b><time>昨天 21:33</time></div>
+            <div class="cmt-ref">三楼尽头的房间</div>
+            悬疑线铺得挺稳，就是更新有点慢，一周两章追得心痒。登记簿那个设定很妙，希望别烂尾。
+          </div>
+
+          <div class="cmt">
+            <div class="cmt-head"><span class="avatar">半</span><b>半杯冷萃</b><time>昨天 19:20</time></div>
+            <div class="cmt-ref">末班地铁的第十一站</div>
+            几乎没对白还能读下去，靠的全是细节。那个“同车厢第三排靠门”的描写我记了很久。
+          </div>
+
+          <div class="cmt">
+            <div class="cmt-head"><span class="avatar">林</span><b>林间有雾</b><time>11 月 7 日</time></div>
+            <div class="cmt-ref">给北方写的十二封信</div>
+            第十二封没有落款日期，这个处理比写一个日期更好。整组信读完像翻完一本没寄出去的日历。
+          </div>
+
+          <div class="cmt">
+            <div class="cmt-head"><span class="avatar">周</span><b>周末不加班</b><time>11 月 7 日</time></div>
+            <div class="cmt-ref">沿着环线走一整夜</div>
+            场景写得好，但情节确实淡。适合睡前翻两篇，想找故事的人可能会觉得空。
+          </div>
+
+          <div class="cmt">
+            <div class="cmt-head"><span class="avatar">小</span><b>小满</b><time>11 月 6 日</time></div>
+            <div class="cmt-ref">凌晨四点还醒着的人</div>
+            中间那个电话是全篇唯一的转折，但我觉得不接电话可能更好。纯独白到天亮会更彻底。
+          </div>
+
+          <div class="cmt">
+            <div class="cmt-head"><span class="avatar">沈</span><b>沈迟</b><time>11 月 6 日</time></div>
+            <div class="cmt-ref">楼道声控灯下的七则</div>
+            七则里最喜欢第三则，楼道里那盏灯一直没亮。人物交叉的地方做得挺巧，可以回头重读。
+          </div>
+
+          <div class="cmt">
+            <div class="cmt-head"><span class="avatar">南</span><b>南风慢</b><time>11 月 5 日</time></div>
+            <div class="cmt-ref">雨夜出租屋</div>
+            前十章节奏确实慢，差点弃了。第十一章开始明显加速，建议新读者从第五章往后看。
+          </div>
+
+          <div class="cmt">
+            <div class="cmt-head"><span class="avatar">顾</span><b>顾北</b><time>11 月 5 日</time></div>
+            <div class="cmt-ref">凌晨两点半 第61期</div>
+            上一期讲失眠那期比这期更好，这期的来信有点同质化，三封讲的其实是同一件事。
+          </div>
+
+          <div class="cmt">
+            <div class="cmt-head"><span class="avatar">禾</span><b>禾口</b><time>11 月 4 日</time></div>
+            <div class="cmt-ref">三楼尽头的房间</div>
+            第八章换前台这个处理有点突然，前面没有铺垫。希望后面能解释清楚，不然像为了拖而拖。
+          </div>
+
+          <div class="cmt">
+            <div class="cmt-head"><span class="avatar">叙</span><b>叙事者</b><time>11 月 4 日</time></div>
+            <div class="cmt-ref">便利店的第七年</div>
+            对话写得好，但便利店夜班的细节有几处不太对，比如交接时间。瑕不掩瑜。
+          </div>
+
+          <div class="cmt">
+            <div class="cmt-head"><span class="avatar">冬</span><b>冬日限定</b><time>11 月 3 日</time></div>
+            <div class="cmt-ref">给北方写的十二封信</div>
+            每封八百字刚好，一次读两三封不会腻。异地那段写得很准，延迟感这个词用得对。
+          </div>
+
+          <div class="cmt">
+            <div class="cmt-head"><span class="avatar">路</span><b>路灯下</b><time>11 月 2 日</time></div>
+            <div class="cmt-ref">末班地铁的第十一站</div>
+            结尾两段改写之后确实更完整了，之前那个版本结束得太急。修订版值得重读一遍。
+          </div>
+
+          <div class="cmt">
+            <div class="cmt-head"><span class="avatar">一</span><b>一只眠羊</b><time>11 月 1 日</time></div>
+            <div class="cmt-ref">沿着环线走一整夜</div>
+            按路线重排之后好读多了，可以按地点跳。高架桥下那篇最好，码头那篇稍弱。
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 板块9：相关资讯 -->
+      <section class="panel" id="news" aria-labelledby="newsH">
+        <div class="sec-head">
+          <h2 id="newsH">夜话资讯</h2>
+        </div>
+        <p class="sec-sub">近期条目上线、栏目调整与社区讨论焦点</p>
+        <div class="news-list">
+
+          <article class="news-item">
+            <img src="https://picsum.photos/seed/taose-news-01/600/400" width="600" height="400" loading="lazy" alt="深夜电台录音间调音台近景">
+            <div>
+              <h3><a href="/#news">《凌晨两点半》改版：来信环节扩至两段</a></h3>
+              <time>2026-11-07</time>
+              <p>节目第 62 期起，来信环节从一段扩为两段，主播回信固定在结尾。排期同步改为每周六零点。</p>
+            </div>
+          </article>
+
+          <article class="news-item">
+            <img src="https://picsum.photos/seed/taose-news-02/600/400" width="600" height="400" loading="lazy" alt="老居民楼夜间楼道与声控灯">
+            <div>
+              <h3><a href="/#news">短篇合集《楼道声控灯下的七则》完成合订</a></h3>
+              <time>2026-11-05</time>
+              <p>七则共用同一栋楼的短故事合并为一册，补充了两处人物交叉说明，新增一则楼道平面示意图。</p>
+            </div>
+          </article>
+
+          <article class="news-item">
+            <img src="https://picsum.photos/seed/taose-news-03/600/400" width="600" height="400" loading="lazy" alt="城市夜行地图与路灯街道">
+            <div>
+              <h3><a href="/#news">「城市漫游」栏目上线夜行地图排序</a></h3>
+              <time>2026-11-02</time>
+              <p>九篇夜行记录按实际路线重新排列，读者可按地点跳读，不必从第一篇开始。</p>
+            </div>
+          </article>
+
+          <article class="news-item">
+            <img src="https://picsum.photos/seed/taose-news-04/600/400" width="600" height="400" loading="lazy" alt="旅店前台登记簿与走廊尽头灯光">
+            <div>
+              <h3><a href="/#news">旅店夜话题材讨论升温：悬疑与情感边界</a></h3>
+              <time>2026-10-31</time>
+              <p>社区围绕《三楼尽头的房间》展开讨论，焦点是登记簿设定属于悬疑铺垫还是情感隐喻。</p>
+            </div>
+          </article>
+
+          <article class="news-item">
+            <img src="https://picsum.photos/seed/taose-news-05/600/400" width="600" height="400" loading="lazy" alt="末班地铁站台与列车进站">
+            <div>
+              <h3><a href="/#news">《末班地铁的第十一站》发布修订版</a></h3>
+              <time>2026-10-29</time>
+              <p>结尾两段重新改写，补入一段站台描写，主线不变。作者在文末附了修订说明。</p>
+            </div>
+          </article>
+
+          <article class="news-item">
+            <img src="https://picsum.photos/seed/taose-news-06/600/400" width="600" height="400" loading="lazy" alt="合租公寓厨房夜间台灯">
+            <div>
+              <h3><a href="/#news">合租日常题材连续三周新增量居首</a></h3>
+              <time>2026-10-27</time>
+              <p>新投稿中合租场景占比最高，编辑部整理了一份场景清单供作者参考，涵盖公共空间与作息冲突。</p>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- 板块10：相关推荐 -->
+      <section class="panel" id="rel" aria-labelledby="relH">
+        <div class="sec-head">
+          <h2 id="relH">延伸方向与相关条目</h2>
+        </div>
+        <p class="sec-sub">从已读条目往外延伸的具体方向，不是热度排序</p>
+        <div class="rel-tags">
+          <a href="/#picks">合租边界题材 <small>214</small></a>
+          <a href="/#picks">停电夜场景 <small>36</small></a>
+          <a href="/#picks">便利店夜班 <small>52</small></a>
+          <a href="/#picks">末班车叙事 <small>78</small></a>
+          <a href="/#picks">登记簿式悬疑 <small>21</small></a>
+          <a href="/#picks">没有回信的书信 <small>39</small></a>
+          <a href="/#picks">夜行路线记录 <small>121</small></a>
+          <a href="/#picks">群像短篇合集 <small>168</small></a>
+        </div>
+      </section>
+
+      <!-- 板块11：补充板块 · 时间线 -->
+      <section class="panel" id="timeline" aria-labelledby="tlH">
+        <div class="sec-head">
+          <h2 id="tlH">条目时间线：近两周上线顺序</h2>
+        </div>
+        <p class="sec-sub">按发布时间排的 10 个节点，方便补更</p>
+        <ol class="timeline">
+          <li>
+            <time>2026-11-08 09:30</time>
+            <b>《雨夜出租屋》第 14 章</b>
+            <span>停电夜对话收尾，搬走话题首次明确。</span>
+          </li>
+          <li>
+            <time>2026-11-08 00:20</time>
+            <b>《凌晨两点半》第 62 期</b>
+            <span>三封搬家来信，主播回信固定在结尾。</span>
+          </li>
+          <li>
+            <time>2026-11-07 21:10</time>
+            <b>《三楼尽头的房间》第 8 章</b>
+            <span>第七个同名记录出现，前台换人。</span>
+          </li>
+          <li>
+            <time>2026-11-06</time>
+            <b>《便利店的第七年》上架短篇榜</b>
+            <span>单篇完结作品进入本周短篇热度前五。</span>
+          </li>
+          <li>
+            <time>2026-11-05</time>
+            <b>《楼道声控灯下的七则》合订</b>
+            <span>七则合并成册，补充两处交叉说明。</span>
+          </li>
+          <li>
+            <time>2026-11-04</time>
+            <b>《末班地铁的第十一站》修订版</b>
+            <span>结尾两段改写，补入站台描写。</span>
+          </li>
+          <li>
+            <time>2026-11-03</time>
+            <b>《给北方写的十二封信》第 12 封</b>
+            <span>全篇完结，最后一封没有落款日期。</span>
+          </li>
+          <li>
+            <time>2026-11-02</time>
+            <b>「城市漫游」夜行地图排序上线</b>
+            <span>九篇记录按路线重排，可按地点跳读。</span>
+          </li>
+          <li>
+            <time>2026-11-01</time>
+            <b>「凌晨独白」频道新增 3 篇</b>
+            <span>投稿集中在校友会、夜班护士、搬家。</span>
+          </li>
+          <li>
+            <time>2026-10-30</time>
+            <b>《凌晨两点半》排期调整</b>
+            <span>改为每周六零点更新，时长放宽到 40 分钟。</span>
+          </li>
+        </ol>
+      </section>
+
+      <!-- 板块12：补充板块 · 可信度分层 -->
+      <section class="panel" id="trust" aria-labelledby="trustH">
+        <div class="sec-head">
+          <h2 id="trustH">条目参考分层：怎么看待热度与评分</h2>
+        </div>
+        <p class="sec-sub">不同信息源的参考价值不同，按层判断更稳</p>
+        <table class="compare">
+          <thead>
+            <tr><th>层级</th><th>包含信息</th><th>参考方式</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>第一层</td><td>条目正文、章节目录、更新日期</td><td>直接决定是否值得读，优先看</td></tr>
+            <tr><td>第二层</td><td>标签、时长、单章字数</td><td>用于快速筛选，标签重复度高时参考价值下降</td></tr>
+            <tr><td>第三层</td><td>热度值、播放量</td><td>反映近期关注度，不代表与个人口味一致</td></tr>
+            <tr><td>第四层</td><td>读者评论、评分</td><td>看具体评论提到的细节，比看总分更有效</td></tr>
+          </tbody>
+        </table>
+        <p>以《雨夜出租屋》为例，热度 9.4 属于第三层信息，但真正决定要不要追的是第一层的章节目录——前十章慢、第十一章加速，这个结构在目录里能看出来。评论里的“建议从第五章往后看”属于第四层，需要结合自己的耐心程度判断，不能直接照搬。</p>
+      </section>
+
+    </div>
+
+    <!-- 右：辅助栏 -->
+    <aside class="col-right" aria-label="辅助信息">
+      <div class="side-card">
+        <p class="side-title">夜读热榜</p>
+        <ol class="rank-list">
+          <li><div><b>雨夜出租屋</b><small>连载 · 热度 9.4</small></div></li>
+          <li><div><b>三楼尽头的房间</b><small>连载 · 热度 9.1</small></div></li>
+          <li><div><b>便利店的第七年</b><small>短篇 · 热度 8.9</small></div></li>
+          <li><div><b>凌晨四点还醒着的人</b><small>独白 · 热度 8.7</small></div></li>
+          <li><div><b>末班地铁的第十一站</b><small>短篇 · 热度 8.5</small></div></li>
+          <li><div><b>楼道声控灯下的七则</b><small>合集 · 热度 8.3</small></div></li>
+          <li><div><b>给北方写的十二封信</b><small>书信 · 热度 8.2</small></div></li>
+          <li><div><b>沿着环线走一整夜</b><small>漫游 · 热度 7.8</small></div></li>
+        </ol>
+      </div>
+
+      <div class="side-card">
+        <p class="side-title">今晚更新</p>
+        <ul class="update-feed">
+          <li>《雨夜出租屋》第 14 章<time>今天 09:30</time></li>
+          <li>《凌晨两点半》第 62 期<time>今天 00:20</time></li>
+          <li>《三楼尽头的房间》第 8 章<time>昨天 21:10</time></li>
+          <li>「凌晨独白」新增 3 篇<time>11 月 6 日</time></li>
+        </ul>
+      </div>
+
+      <div class="side-card">
+        <p class="side-title">栏目入口</p>
+        <ul class="chan-nav">
+          <li><a href="/#deep">夜读深读</a></li>
+          <li><a href="/#guide">夜读入门</a></li>
+          <li><a href="/#comments">读者评论</a></li>
+          <li><a href="/#timeline">更新时间线</a></li>
+          <li><a href="/#trust">参考分层</a></li>
+        </ul>
+      </div>
+    </aside>
+
+  </div>
+
+  <div id="searchEmpty" role="status" aria-live="polite">没有找到匹配的故事或电台条目，换个关键词试试，比如“合租”“末班车”“书信”。</div>
+
+</main>
+
+<footer class="site-foot">
+  <div class="foot-inner">
+    <div class="foot-top">
+      <div>
+        <div class="foot-brand">
+          <svg width="34" height="34" viewBox="0 0 64 64" role="img" aria-label="91桃色 标志图形">
+            <rect width="64" height="64" rx="16" fill="#241422"/>
+            <circle cx="32" cy="25" r="11.5" fill="none" stroke="#e86a8a" stroke-width="3.6"/>
+            <path d="M20 53c2.6-9.4 8.6-13.6 12-13.6S41.4 43.6 44 53" fill="none" stroke="#e86a8a" stroke-width="3.6" stroke-linecap="round"/>
+            <circle cx="46" cy="17" r="3.2" fill="#f0b26b"/>
+          </svg>
+          <span class="brand-text">91桃色</span>
+        </div>
+        <p class="foot-about">聚合都市夜色情感短篇、情感连载与深夜电台节目，按题材与时长整理条目，供夜读时按类型挑选。</p>
+      </div>
+      <div class="foot-col">
+        <h4>题材频道</h4>
+        <a href="/#picks">合租日常</a>
+        <a href="/#picks">旧情重逢</a>
+        <a href="/#picks">加班夜归</a>
+        <a href="/#picks">深夜电台</a>
+      </div>
+      <div class="foot-col">
+        <h4>内容栏目</h4>
+        <a href="/#deep">夜读深读</a>
+        <a href="/#guide">夜读入门</a>
+        <a href="/#news">夜话资讯</a>
+        <a href="/#timeline">更新时间线</a>
+      </div>
+      <div class="foot-col">
+        <h4>读者服务</h4>
+        <a href="/#faq">常见问答</a>
+        <a href="/#comments">读者评论</a>
+        <a href="/#trust">参考分层</a>
+        <a href="/#rel">延伸方向</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 91桃色 · 夜色情感故事聚合</span>
+      <span>部分内容为示例数据，仅用于展示页面结构</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var input = document.getElementById('siteSearch');
+  var empty = document.getElementById('searchEmpty');
+  if(!input) return;
+
+  // 收集可检索的具体条目：卡片、更新列表、时间线、资讯
+  var nodes = [].slice.call(document.querySelectorAll('#picks .card, #upd .upd-list li, #timeline .timeline li, #news .news-item'));
+  var items = nodes.map(function(el){
+    return {el: el, text: (el.textContent || '').replace(/\s+/g, '')};
+  });
+
+  function run(){
+    var q = (input.value || '').trim().replace(/\s+/g, '');
+    if(!q){
+      items.forEach(function(it){ it.el.style.display = ''; });
+      empty.style.display = 'none';
+      return;
+    }
+    var hit = 0;
+    items.forEach(function(it){
+      var ok = it.text.indexOf(q) !== -1;
+      it.el.style.display = ok ? '' : 'none';
+      if(ok) hit++;
+    });
+    empty.style.display = hit ? 'none' : 'block';
+  }
+
+  input.addEventListener('input', run);
+  input.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){ e.preventDefault(); run(); }
+  });
+})();
+</script>
+
+</body>
+                           </html>
