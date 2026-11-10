@@ -1,0 +1,1612 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>buy1take2寸止 - 节奏控制训练与挑战合集</title>
+  <meta name="description" content="buy1take2寸止是围绕节奏控制与耐力挑战的内容聚合页，提供寸止训练条目、计时方案、单人/双人模式对比、挑战榜单和常见问题解答，适合想系统练习节奏控制与延迟满足的爱好者参考。">
+  <meta name="keywords" content="寸止挑战,节奏控制训练,计时练习,耐力挑战,延迟满足">
+  <style>
+    :root {
+      --bg: #f7f5f0;
+      --surface: #ffffff;
+      --surface-alt: #f0ede8;
+      --border: #e0dbd2;
+      --text: #2c2824;
+      --text-secondary: #6b655e;
+      --text-muted: #9a938b;
+      --primary: #4a6a5a;
+      --primary-light: #e8f0ec;
+      --primary-dark: #2d4a3e;
+      --accent: #c47a4a;
+      --accent-light: #faf0e8;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(44,40,36,0.06);
+      --shadow-md: 0 4px 12px rgba(44,40,36,0.08);
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      --font-mono: "SF Mono", "Cascadia Code", "Consolas", monospace;
+      --announce-h: 40px;
+      --header-h: 64px;
+      --sticky-offset: calc(var(--announce-h) + var(--header-h) + 12px);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { max-width: 100%; height: auto; display: block; object-fit: cover; }
+
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { color: var(--primary-dark); text-decoration: underline; }
+
+    /* ========== 吸顶公告条 + 页头 ========== */
+    .sticky-wrap {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bg);
+    }
+
+    .announce-bar {
+      height: var(--announce-h);
+      background: var(--primary-dark);
+      color: #e8f0ec;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      letter-spacing: 0.02em;
+      padding: 0 16px;
+      gap: 8px;
+    }
+    .announce-bar strong { color: #fff; font-weight: 600; }
+    .announce-bar .announce-tag {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      font-size: 11px;
+      padding: 1px 7px;
+      border-radius: 3px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    .site-header {
+      height: var(--header-h);
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      padding: 0 24px;
+      gap: 32px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+    .brand svg { width: 34px; height: 34px; }
+    .brand-text {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.01em;
+      white-space: nowrap;
+    }
+
+    .main-nav {
+      display: flex;
+      gap: 4px;
+      overflow-x: auto;
+      flex: 1;
+      scrollbar-width: none;
+    }
+    .main-nav::-webkit-scrollbar { display: none; }
+    .main-nav a {
+      font-size: 14px;
+      color: var(--text-secondary);
+      padding: 6px 12px;
+      border-radius: var(--radius-sm);
+      white-space: nowrap;
+      transition: background 0.15s, color 0.15s;
+    }
+    .main-nav a:hover, .main-nav a:focus-visible {
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      text-decoration: none;
+    }
+
+    .header-search {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+    .header-search input {
+      width: 180px;
+      padding: 7px 12px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+      font-family: var(--font-sans);
+      background: var(--bg);
+      color: var(--text);
+      transition: border-color 0.15s, width 0.2s;
+    }
+    .header-search input:focus {
+      outline: none;
+      border-color: var(--primary);
+      width: 220px;
+    }
+    .header-search button {
+      padding: 7px 14px;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+      cursor: pointer;
+      font-family: var(--font-sans);
+      transition: background 0.15s;
+    }
+    .header-search button:hover { background: var(--primary-dark); }
+
+    /* ========== 锚点偏移 ========== */
+    [id] { scroll-margin-top: var(--sticky-offset); }
+
+    /* ========== 主体布局 ========== */
+    .container {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .layout-three-col {
+      display: grid;
+      grid-template-columns: 180px minmax(0, 1fr) 260px;
+      gap: 24px;
+      padding: 28px 0 48px;
+      align-items: start;
+    }
+
+    /* ========== 首屏 ========== */
+    .hero {
+      grid-column: 1 / -1;
+      background: linear-gradient(135deg, #2d4a3e 0%, #3d5e4e 40%, #4a6a5a 100%);
+      border-radius: var(--radius-lg);
+      padding: 48px 40px;
+      color: #e8f0ec;
+      position: relative;
+      overflow: hidden;
+      min-height: 240px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      right: -40px;
+      top: -60px;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.04);
+      pointer-events: none;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      right: 60px;
+      bottom: -80px;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 2px solid rgba(255,255,255,0.08);
+      pointer-events: none;
+    }
+    .hero h1 {
+      font-size: 36px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+      position: relative;
+      z-index: 1;
+    }
+    .hero p {
+      font-size: 15px;
+      color: #c5d6cc;
+      max-width: 620px;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+      line-height: 1.75;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-actions a {
+      display: inline-block;
+      padding: 9px 22px;
+      border-radius: var(--radius-sm);
+      font-size: 14px;
+      font-weight: 600;
+      transition: background 0.15s, transform 0.1s;
+    }
+    .hero-actions a:first-child {
+      background: #fff;
+      color: var(--primary-dark);
+    }
+    .hero-actions a:first-child:hover { background: #e8f0ec; text-decoration: none; }
+    .hero-actions a:last-child {
+      background: transparent;
+      color: #e8f0ec;
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+    .hero-actions a:last-child:hover { background: rgba(255,255,255,0.08); text-decoration: none; }
+
+    /* ========== 左频道索引 ========== */
+    .channel-index {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 18px 0;
+      position: sticky;
+      top: var(--sticky-offset);
+    }
+    .channel-index h2 {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0 18px 10px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 6px;
+    }
+    .channel-index nav { display: flex; flex-direction: column; }
+    .channel-index nav a {
+      padding: 7px 18px;
+      font-size: 14px;
+      color: var(--text-secondary);
+      border-left: 3px solid transparent;
+      transition: background 0.12s, border-color 0.12s, color 0.12s;
+      line-height: 1.5;
+    }
+    .channel-index nav a:hover, .channel-index nav a:focus-visible {
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      border-left-color: var(--primary);
+      text-decoration: none;
+    }
+
+    /* ========== 中间主内容 ========== */
+    .main-content { min-width: 0; }
+
+    .section-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 28px 30px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+    .section-header h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+    .section-header .section-note {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* ========== 概览 ========== */
+    .overview-text p {
+      font-size: 15px;
+      color: var(--text-secondary);
+      margin-bottom: 12px;
+      line-height: 1.85;
+    }
+    .overview-text p:last-child { margin-bottom: 0; }
+    .overview-text strong { color: var(--text); font-weight: 600; }
+
+    /* ========== 精选卡片 ========== */
+    .featured-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    .featured-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      background: var(--surface);
+      transition: box-shadow 0.15s, transform 0.12s;
+      display: flex;
+      flex-direction: column;
+    }
+    .featured-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .featured-card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+    }
+    .featured-card-body { padding: 14px 16px 16px; flex: 1; display: flex; flex-direction: column; }
+    .featured-card-body h3 {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--text);
+      line-height: 1.4;
+    }
+    .featured-card-body .card-types {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-bottom: 8px;
+    }
+    .type-tag {
+      font-size: 11px;
+      padding: 1px 8px;
+      border-radius: 3px;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .type-tag.accent { background: var(--accent-light); color: var(--accent); }
+    .featured-card-body .card-desc {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      flex: 1;
+      margin-bottom: 10px;
+    }
+    .card-meta {
+      display: flex;
+      gap: 12px;
+      font-size: 12px;
+      color: var(--text-muted);
+      flex-wrap: wrap;
+    }
+    .card-meta .hot { color: var(--accent); font-weight: 600; }
+
+    /* ========== 最新更新列表 ========== */
+    .update-list { list-style: none; }
+    .update-list li {
+      display: flex;
+      gap: 14px;
+      padding: 11px 0;
+      border-bottom: 1px solid var(--surface-alt);
+      align-items: baseline;
+      font-size: 14px;
+    }
+    .update-list li:last-child { border-bottom: none; padding-bottom: 0; }
+    .update-list li:first-child { padding-top: 0; }
+    .update-list .update-name {
+      font-weight: 600;
+      color: var(--text);
+      min-width: 140px;
+      flex-shrink: 0;
+    }
+    .update-list .update-desc {
+      color: var(--text-secondary);
+      flex: 1;
+      line-height: 1.6;
+    }
+    .update-list .update-time {
+      font-size: 12px;
+      color: var(--text-muted);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    /* ========== 分类入口 ========== */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+    .category-item {
+      display: block;
+      padding: 14px 12px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      text-align: center;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      background: var(--surface);
+      transition: background 0.12s, border-color 0.12s;
+    }
+    .category-item:hover {
+      background: var(--primary-light);
+      border-color: var(--primary);
+      text-decoration: none;
+      color: var(--primary-dark);
+    }
+    .category-item .cat-count {
+      display: block;
+      font-size: 11px;
+      font-weight: 400;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* ========== 深度解析 ========== */
+    .deep-dive h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text);
+      margin: 22px 0 10px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid var(--primary-light);
+    }
+    .deep-dive h3:first-of-type { margin-top: 0; }
+    .deep-dive p {
+      font-size: 14.5px;
+      color: var(--text-secondary);
+      line-height: 1.85;
+      margin-bottom: 12px;
+    }
+    .deep-dive ul {
+      margin: 8px 0 16px 20px;
+      font-size: 14.5px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+    .deep-dive ul li { margin-bottom: 6px; }
+    .deep-dive ul li strong { color: var(--text); }
+
+    /* ========== 体验指南 ========== */
+    .guide-steps {
+      counter-reset: step;
+      list-style: none;
+    }
+    .guide-steps li {
+      counter-increment: step;
+      position: relative;
+      padding: 12px 0 12px 44px;
+      border-bottom: 1px solid var(--surface-alt);
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.75;
+    }
+    .guide-steps li:last-child { border-bottom: none; }
+    .guide-steps li::before {
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 14px;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+    }
+    .guide-steps li strong { color: var(--text); font-weight: 600; }
+
+    /* ========== FAQ ========== */
+    .faq-list details {
+      border-bottom: 1px solid var(--surface-alt);
+      padding: 4px 0;
+    }
+    .faq-list details:first-child { border-top: 1px solid var(--surface-alt); }
+    .faq-list summary {
+      cursor: pointer;
+      padding: 12px 0;
+      font-size: 14.5px;
+      font-weight: 600;
+      color: var(--text);
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.12s;
+    }
+    .faq-list summary::-webkit-details-marker { display: none; }
+    .faq-list summary::before {
+      content: '+';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--primary-light);
+      color: var(--primary);
+      font-size: 14px;
+      font-weight: 700;
+      flex-shrink: 0;
+      transition: transform 0.2s;
+    }
+    .faq-list details[open] summary::before {
+      content: '−';
+      transform: rotate(0deg);
+    }
+    .faq-list summary:hover { color: var(--primary); }
+    .faq-answer {
+      padding: 0 0 14px 28px;
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    /* ========== 评论 ========== */
+    .comment-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .comment-item {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--surface-alt);
+    }
+    .comment-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .comment-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 5px;
+    }
+    .comment-avatar {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      font-size: 13px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .comment-nick {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .comment-time {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-left: auto;
+    }
+    .comment-body {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      padding-left: 40px;
+    }
+
+    /* ========== 资讯 ========== */
+    .news-list { list-style: none; }
+    .news-item {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--surface-alt);
+    }
+    .news-item:first-child { padding-top: 0; }
+    .news-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .news-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 4px;
+      line-height: 1.5;
+    }
+    .news-date {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+    .news-summary {
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* ========== 相关推荐 ========== */
+    .related-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .related-tag {
+      display: inline-block;
+      padding: 6px 16px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      font-size: 13px;
+      color: var(--text-secondary);
+      background: var(--surface);
+      transition: background 0.12s, border-color 0.12s, color 0.12s;
+    }
+    .related-tag:hover {
+      background: var(--primary-light);
+      border-color: var(--primary);
+      color: var(--primary-dark);
+      text-decoration: none;
+    }
+
+    /* ========== 榜单 ========== */
+    .ranking-list { list-style: none; counter-reset: rank; }
+    .ranking-list li {
+      counter-increment: rank;
+      display: flex;
+      gap: 12px;
+      align-items: baseline;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--surface-alt);
+      font-size: 14px;
+    }
+    .ranking-list li:last-child { border-bottom: none; padding-bottom: 0; }
+    .ranking-list li::before {
+      content: counter(rank);
+      width: 22px;
+      height: 22px;
+      border-radius: 4px;
+      background: var(--surface-alt);
+      color: var(--text-secondary);
+      font-size: 12px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .ranking-list li:nth-child(1)::before { background: var(--accent); color: #fff; }
+    .ranking-list li:nth-child(2)::before { background: var(--primary); color: #fff; }
+    .ranking-list li:nth-child(3)::before { background: var(--primary-light); color: var(--primary-dark); }
+    .ranking-list .rank-name { font-weight: 600; color: var(--text); }
+    .ranking-list .rank-meta { font-size: 12px; color: var(--text-muted); margin-left: auto; white-space: nowrap; }
+
+    /* ========== 右辅助栏 ========== */
+    .sidebar {
+      position: sticky;
+      top: var(--sticky-offset);
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .sidebar-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 18px 20px;
+      box-shadow: var(--shadow-sm);
+    }
+    .sidebar-card h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--surface-alt);
+    }
+    .sidebar-card .sidebar-list { list-style: none; }
+    .sidebar-card .sidebar-list li {
+      padding: 6px 0;
+      font-size: 13px;
+      color: var(--text-secondary);
+      border-bottom: 1px solid var(--surface-alt);
+      line-height: 1.5;
+    }
+    .sidebar-card .sidebar-list li:last-child { border-bottom: none; }
+    .sidebar-card .sidebar-list a { color: var(--text-secondary); }
+    .sidebar-card .sidebar-list a:hover { color: var(--primary); }
+    .sidebar-card .sidebar-list .side-meta {
+      display: block;
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 1px;
+    }
+
+    /* ========== 页尾 ========== */
+    .site-footer {
+      background: var(--primary-dark);
+      color: #b8ccc0;
+      padding: 40px 0 28px;
+      margin-top: 16px;
+    }
+    .footer-inner {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.4fr repeat(3, 1fr);
+      gap: 32px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .footer-brand .footer-logo {
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .footer-brand p {
+      font-size: 13px;
+      line-height: 1.7;
+      color: #9ab5a6;
+      max-width: 300px;
+    }
+    .footer-col h4 {
+      font-size: 13px;
+      font-weight: 700;
+      color: #dce8e2;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .footer-col a {
+      display: block;
+      font-size: 13px;
+      color: #9ab5a6;
+      padding: 3px 0;
+      transition: color 0.12s;
+    }
+    .footer-col a:hover { color: #fff; text-decoration: none; }
+    .footer-bottom {
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 12px;
+      color: #7d9a8c;
+    }
+
+    /* ========== 无结果提示 ========== */
+    .no-result {
+      display: none;
+      padding: 24px;
+      text-align: center;
+      font-size: 14px;
+      color: var(--text-muted);
+      background: var(--surface-alt);
+      border-radius: var(--radius-sm);
+      margin-top: 12px;
+    }
+    .no-result.visible { display: block; }
+
+    /* ========== 响应式 ========== */
+    @media (max-width: 1024px) {
+      .layout-three-col {
+        grid-template-columns: 1fr 260px;
+      }
+      .channel-index {
+        grid-column: 1 / -1;
+        position: static;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 10px 0;
+        border-radius: var(--radius-sm);
+        gap: 2px;
+      }
+      .channel-index h2 {
+        border-bottom: none;
+        padding: 0 12px;
+        margin-bottom: 0;
+        font-size: 12px;
+      }
+      .channel-index nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2px;
+      }
+      .channel-index nav a {
+        border-left: none;
+        padding: 5px 12px;
+        border-radius: var(--radius-sm);
+        font-size: 13px;
+      }
+      .channel-index nav a:hover { border-left-color: transparent; }
+      .featured-grid { grid-template-columns: repeat(2, 1fr); }
+      .category-grid { grid-template-columns: repeat(4, 1fr); }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 740px) {
+      :root {
+        --announce-h: 36px;
+        --header-h: 56px;
+      }
+      .site-header {
+        padding: 0 14px;
+        gap: 12px;
+      }
+      .brand-text { font-size: 15px; }
+      .brand svg { width: 28px; height: 28px; }
+      .main-nav { display: none; }
+      .header-search input { width: 120px; }
+      .header-search input:focus { width: 140px; }
+      .header-search button { padding: 7px 10px; font-size: 12px; }
+
+      .layout-three-col {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 16px 0 32px;
+      }
+      .container { padding: 0 14px; }
+
+      .hero {
+        padding: 28px 20px;
+        min-height: 200px;
+        border-radius: var(--radius-md);
+      }
+      .hero h1 { font-size: 26px; }
+      .hero p { font-size: 14px; }
+      .hero-actions a { padding: 8px 16px; font-size: 13px; }
+
+      .featured-grid { grid-template-columns: 1fr; }
+      .category-grid { grid-template-columns: repeat(2, 1fr); }
+      .section-card { padding: 20px 16px; }
+
+      .update-list li { flex-wrap: wrap; gap: 4px 10px; }
+      .update-list .update-name { min-width: auto; }
+      .update-list .update-time { width: 100%; text-align: right; }
+
+      .sidebar { position: static; }
+      .footer-top { grid-template-columns: 1fr; gap: 20px; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; gap: 6px; }
+
+      .comment-body { padding-left: 0; }
+    }
+
+    @media (max-width: 380px) {
+      .hero h1 { font-size: 22px; }
+      .category-grid { grid-template-columns: 1fr 1fr; }
+      .header-search input { width: 90px; }
+    }
+
+    /* 焦点可见 */
+    a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible {
+      outline: 2px solid var(--primary);
+      outline-offset: 2px;
+    }
+  </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+  <!-- ===== 吸顶公告条 + 页头 ===== -->
+  <div class="sticky-wrap">
+    <div class="announce-bar">
+      <span class="announce-tag">更新</span>
+      <strong>11 月 8 日</strong> 新增「阶梯计时法·初级 15 分钟」与「双人同步寸止」条目，本周累计更新 9 条训练方案
+    </div>
+    <header class="site-header">
+      <a href="/#hero" class="brand" aria-label="buy1take2寸止 首页">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="4" y="4" width="32" height="32" rx="8" stroke="#4a6a5a" stroke-width="2.5"/>
+          <circle cx="20" cy="20" r="10" stroke="#4a6a5a" stroke-width="2"/>
+          <circle cx="20" cy="20" r="3.5" fill="#c47a4a"/>
+          <path d="M20 10V6" stroke="#4a6a5a" stroke-width="2" stroke-linecap="round"/>
+          <path d="M20 34V30" stroke="#4a6a5a" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-text">buy1take2寸止</span>
+      </a>
+      <nav class="main-nav" aria-label="主题导航">
+        <a href="/#overview">领域概览</a>
+        <a href="/#featured">精选条目</a>
+        <a href="/#updates">最新动态</a>
+        <a href="/#categories">分类入口</a>
+        <a href="/#deepdive">深度解析</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#faq">常见问答</a>
+        <a href="/#comments">用户评论</a>
+        <a href="/#news">相关资讯</a>
+        <a href="/#ranking">热门榜单</a>
+      </nav>
+      <div class="header-search">
+        <input type="search" id="siteSearch" placeholder="搜索条目…" aria-label="搜索条目">
+        <button type="button" id="searchBtn" aria-label="执行搜索">搜索</button>
+      </div>
+    </header>
+  </div>
+
+  <!-- ===== 主容器 ===== -->
+  <div class="container">
+    <div class="layout-three-col">
+
+      <!-- ===== 首屏 ===== -->
+      <section class="hero" id="hero">
+        <h1>buy1take2寸止</h1>
+        <p>围绕节奏控制与耐力挑战的内容聚合页，收录单人计时、双人配合、阶梯递进等寸止训练方案，以及条目对比、社区讨论和常见判断依据，适合想系统了解节奏控制练习的爱好者。</p>
+        <div class="hero-actions">
+          <a href="/#featured">浏览精选条目</a>
+          <a href="/#guide">查看体验指南</a>
+        </div>
+      </section>
+
+      <!-- ===== 左频道索引 ===== -->
+      <aside class="channel-index" aria-label="频道索引">
+        <h2>频道</h2>
+        <nav>
+          <a href="/#overview">领域概览</a>
+          <a href="/#featured">精选条目</a>
+          <a href="/#updates">最新动态</a>
+          <a href="/#categories">分类入口</a>
+          <a href="/#deepdive">深度解析</a>
+          <a href="/#guide">体验指南</a>
+          <a href="/#faq">常见问答</a>
+          <a href="/#comments">用户评论</a>
+          <a href="/#news">相关资讯</a>
+          <a href="/#related">相关推荐</a>
+          <a href="/#ranking">热门榜单</a>
+          <a href="/#timeline">条目时间线</a>
+        </nav>
+      </aside>
+
+      <!-- ===== 中间主内容 ===== -->
+      <main class="main-content">
+
+        <!-- 领域概览 -->
+        <section class="section-card" id="overview">
+          <div class="section-header">
+            <h2>节奏控制练习领域概览</h2>
+          </div>
+          <div class="overview-text">
+            <p><strong>buy1take2寸止</strong> 指向的是一类围绕节奏控制与延迟满足展开的自我练习内容。这类练习常见于耐力训练、专注力练习和身心协调场景，核心在于在接近临界点时主动暂停、调整呼吸与节奏，再重新进入下一循环。当前可关注的练习方向包括：单人计时练习、双人同步配合、阶梯递进方案、呼吸锚定训练，以及以周为单位的耐力积累计划。</p>
+            <p>具体条目涵盖从初级 10 分钟到进阶 45 分钟的计时方案，例如「阶梯计时法·初级 15 分钟」「双人同步寸止·默契模式」「呼吸锚定四拍循环」。每个条目通常标注难度层级、适用场景、单轮时长和累计轮次，方便使用者按自身节奏选择。社区中讨论较多的方向包括：如何判断当前是否适合进入下一难度、暂停窗口的长度如何调整、双人模式下如何保持同步。</p>
+            <p>对于初次接触的访问者，建议先了解「暂停窗口」和「恢复节奏」两个基础概念，再从初级条目开始记录单次练习时长与主观感受。已有练习经验的用户则可以关注进阶条目中的阶梯参数和呼吸配比，并结合时间线查看近期更新的方案。</p>
+          </div>
+        </section>
+
+        <!-- 精选内容推荐 -->
+        <section class="section-card" id="featured">
+          <div class="section-header">
+            <h2>精选寸止练习条目</h2>
+            <span class="section-note">按关注度与更新频率整理</span>
+          </div>
+          <div class="featured-grid">
+            <article class="featured-card">
+              <img src="https://picsum.photos/seed/cunzhi-jieti01/400/300" alt="阶梯计时法初级15分钟练习界面" width="400" height="300" loading="lazy">
+              <div class="featured-card-body">
+                <h3>阶梯计时法·初级 15 分钟</h3>
+                <div class="card-types">
+                  <span class="type-tag">单人计时</span>
+                  <span class="type-tag">初级</span>
+                </div>
+                <p class="card-desc">以 3 分钟为一段逐级递增暂停窗口，共 5 段递进，适合建立基础节奏感。每段结束后有 60 秒恢复提示。</p>
+                <div class="card-meta">
+                  <span class="hot">关注 2.4k</span>
+                  <span>更新 2026-11-08</span>
+                </div>
+              </div>
+            </article>
+            <article class="featured-card">
+              <img src="https://picsum.photos/seed/cunzhi-shuangren02/400/300" alt="双人同步寸止默契模式示意图" width="400" height="300" loading="lazy">
+              <div class="featured-card-body">
+                <h3>双人同步寸止·默契模式</h3>
+                <div class="card-types">
+                  <span class="type-tag">双人配合</span>
+                  <span class="type-tag accent">进阶</span>
+                </div>
+                <p class="card-desc">两人通过呼吸信号同步暂停与恢复，单轮 20 分钟，含 4 次同步节点。需要提前约定一个非语言提示动作。</p>
+                <div class="card-meta">
+                  <span class="hot">关注 1.8k</span>
+                  <span>更新 2026-11-06</span>
+                </div>
+              </div>
+            </article>
+            <article class="featured-card">
+              <img src="https://picsum.photos/seed/cunzhi-huxi03/400/300" alt="呼吸锚定四拍循环训练卡片" width="400" height="300" loading="lazy">
+              <div class="featured-card-body">
+                <h3>呼吸锚定四拍循环</h3>
+                <div class="card-types">
+                  <span class="type-tag">呼吸训练</span>
+                  <span class="type-tag">基础</span>
+                </div>
+                <p class="card-desc">以四拍吸气、四拍屏息、四拍呼气为循环，配合 8 轮寸止节点。适合在计时练习前作为热身使用。</p>
+                <div class="card-meta">
+                  <span class="hot">关注 1.5k</span>
+                  <span>更新 2026-11-03</span>
+                </div>
+              </div>
+            </article>
+            <article class="featured-card">
+              <img src="https://picsum.photos/seed/cunzhi-jieti04/400/300" alt="阶梯计时法进阶30分钟挑战封面" width="400" height="300" loading="lazy">
+              <div class="featured-card-body">
+                <h3>阶梯计时法·进阶 30 分钟</h3>
+                <div class="card-types">
+                  <span class="type-tag">单人计时</span>
+                  <span class="type-tag accent">进阶</span>
+                </div>
+                <p class="card-desc">在初级方案基础上将暂停窗口延长至 4 分钟，共 7 段递进，末段要求连续两次 90 秒暂停。建议有 2 周以上基础后尝试。</p>
+                <div class="card-meta">
+                  <span class="hot">关注 1.3k</span>
+                  <span>更新 2026-11-05</span>
+                </div>
+              </div>
+            </article>
+            <article class="featured-card">
+              <img src="https://picsum.photos/seed/cunzhi-danren05/400/300" alt="单人专注15分钟无间断练习截图" width="400" height="300" loading="lazy">
+              <div class="featured-card-body">
+                <h3>单人专注·15 分钟无间断</h3>
+                <div class="card-types">
+                  <span class="type-tag">单人计时</span>
+                  <span class="type-tag">基础</span>
+                </div>
+                <p class="card-desc">全程不设暂停节点，要求保持匀速节奏 15 分钟，结束后记录主观疲劳度。适合测试当前基础水平。</p>
+                <div class="card-meta">
+                  <span class="hot">关注 1.1k</span>
+                  <span>更新 2026-10-28</span>
+                </div>
+              </div>
+            </article>
+            <article class="featured-card">
+              <img src="https://picsum.photos/seed/cunzhi-zhouji06/400/300" alt="周计划耐力积累表模板" width="400" height="300" loading="lazy">
+              <div class="featured-card-body">
+                <h3>周计划·耐力积累表</h3>
+                <div class="card-types">
+                  <span class="type-tag">计划工具</span>
+                  <span class="type-tag">周期</span>
+                </div>
+                <p class="card-desc">按周一至周日分配不同强度的寸止条目，包含 3 天轻量、2 天中等、2 天恢复。提供打卡栏位和周期对比建议。</p>
+                <div class="card-meta">
+                  <span class="hot">关注 980</span>
+                  <span>更新 2026-11-02</span>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="no-result" id="searchNoResult">没有找到相关条目，请尝试其他关键词。</div>
+        </section>
+
+        <!-- 最新更新 -->
+        <section class="section-card" id="updates">
+          <div class="section-header">
+            <h2>最新更新与动态</h2>
+            <span class="section-note">截至 2026-11-08</span>
+          </div>
+          <ul class="update-list">
+            <li>
+              <span class="update-name">阶梯计时法·初级 15 分钟</span>
+              <span class="update-desc">新增第 3 段 90 秒暂停窗口的可选调整说明</span>
+              <span class="update-time">今天 09:30</span>
+            </li>
+            <li>
+              <span class="update-name">双人同步寸止·默契模式</span>
+              <span class="update-desc">补充同步节点信号约定示例，更新第 4 节点提示音</span>
+              <span class="update-time">今天 08:15</span>
+            </li>
+            <li>
+              <span class="update-name">呼吸锚定四拍循环</span>
+              <span class="update-desc">修正热身阶段屏息时长描述，由 5 秒调整为 4 秒</span>
+              <span class="update-time">昨天 21:10</span>
+            </li>
+            <li>
+              <span class="update-name">阶梯计时法·进阶 30 分钟</span>
+              <span class="update-desc">第 6 段新增连续暂停组合，并附呼吸节奏参考</span>
+              <span class="update-time">昨天 16:45</span>
+            </li>
+            <li>
+              <span class="update-name">周计划·耐力积累表</span>
+              <span class="update-desc">开放 11 月第二周模板下载，新增恢复日建议</span>
+              <span class="update-time">11 月 6 日</span>
+            </li>
+            <li>
+              <span class="update-name">单人专注·15 分钟无间断</span>
+              <span class="update-desc">新增疲劳度自评量表，1—5 级描述更具体</span>
+              <span class="update-time">11 月 5 日</span>
+            </li>
+            <li>
+              <span class="update-name">双人同步寸止·交替模式</span>
+              <span class="update-desc">条目上线，两人交替主导暂停节点，单轮 25 分钟</span>
+              <span class="update-time">11 月 4 日</span>
+            </li>
+            <li>
+              <span class="update-name">暂停窗口判断指南</span>
+              <span class="update-desc">新增 3 种常见误判场景和调整建议</span>
+              <span class="update-time">11 月 3 日</span>
+            </li>
+            <li>
+              <span class="update-name">呼吸锚定六拍进阶</span>
+              <span class="update-desc">新增六拍循环版本，适合已完成四拍基础的用户</span>
+              <span class="update-time">11 月 1 日</span>
+            </li>
+            <li>
+              <span class="update-name">社区本周讨论焦点</span>
+              <span class="update-desc">关于暂停窗口长度与练习效果的关系讨论汇总</span>
+              <span class="update-time">10 月 30 日</span>
+            </li>
+          </ul>
+        </section>
+
+        <!-- 分类入口 -->
+        <section class="section-card" id="categories">
+          <div class="section-header">
+            <h2>按类型浏览寸止条目</h2>
+          </div>
+          <div class="category-grid">
+            <a href="/#featured" class="category-item">单人计时<span class="cat-count">12 条</span></a>
+            <a href="/#featured" class="category-item">双人配合<span class="cat-count">7 条</span></a>
+            <a href="/#featured" class="category-item">呼吸锚定<span class="cat-count">9 条</span></a>
+            <a href="/#featured" class="category-item">阶梯递进<span class="cat-count">6 条</span></a>
+            <a href="/#featured" class="category-item">耐力周计划<span class="cat-count">4 条</span></a>
+            <a href="/#featured" class="category-item">初级入门<span class="cat-count">11 条</span></a>
+            <a href="/#featured" class="category-item">进阶挑战<span class="cat-count">8 条</span></a>
+            <a href="/#featured" class="category-item">恢复与调整<span class="cat-count">5 条</span></a>
+          </div>
+        </section>
+
+        <!-- 深度解析 -->
+        <section class="section-card deep-dive" id="deepdive">
+          <div class="section-header">
+            <h2>寸止练习的类型差异与判断维度</h2>
+          </div>
+          <h3>单人计时与双人同步的核心区别</h3>
+          <p>单人计时类条目以个人节奏为主线，暂停窗口的长度和出现时机由自己掌握。这类练习的优势在于可以随时根据身体反馈调整，适合刚开始建立节奏感的使用者。双人同步类条目则要求两人在同一时间点暂停和恢复，考验的是信号传递和默契程度，暂停窗口通常更短、更密集，单轮时长通常在 20—25 分钟之间。选择时可以先问自己：当前更希望练习自我感知，还是更希望练习与搭档的配合？</p>
+          <h3>阶梯递进与匀速练习的效果差异</h3>
+          <p>阶梯递进类条目将总时长拆分为多个逐级递增的小段，每段之间设恢复窗口。以「阶梯计时法·初级 15 分钟」为例，5 段练习中暂停窗口从 60 秒逐步增至 120 秒，这种结构对节奏变化的适应能力要求更高。匀速练习则要求全程保持相同节奏，不设明显暂停节点，更侧重稳定性和耐力的持续输出。两种类型可以交替使用：阶梯类适合突破当前上限，匀速类适合检验基础是否扎实。</p>
+          <h3>呼吸锚定的作用与常见参数</h3>
+          <p>呼吸锚定是寸止练习中常用的辅助方法，通过固定呼吸节拍来稳定身体状态。常见的参数包括四拍循环（吸 4 秒、屏 4 秒、呼 4 秒）和六拍循环（吸 6 秒、屏 6 秒、呼 6 秒）。四拍循环更适合初级和热身阶段，六拍循环需要一定的呼吸控制基础。练习时需要注意：屏息阶段不应感到明显不适，一旦出现头晕或胸闷应立即恢复自然呼吸并降低难度。</p>
+          <h3>暂停窗口的判断与调整策略</h3>
+          <ul>
+            <li><strong>窗口过短：</strong>如果每次暂停后恢复节奏明显加快，说明当前窗口不足以让身体回到稳定状态，建议延长 15—30 秒。</li>
+            <li><strong>窗口过长：</strong>暂停后感到节奏明显松散、难以重新进入，说明窗口偏长，可以缩短 10—20 秒。</li>
+            <li><strong>连续两次无法完成：</strong>连续两个练习周期都无法完整执行当前参数，建议退回上一难度层级，巩固 3—5 天后再尝试。</li>
+            <li><strong>主观疲劳度持续偏高：</strong>连续三天练习后疲劳自评在 4 级以上，应增加恢复日或选择轻量条目。</li>
+          </ul>
+          <h3>如何比较两个相近的寸止条目</h3>
+          <p>当两个条目的总时长相近时，可以从暂停节点数量、单次暂停长度、恢复方式三个维度对比。节点更多意味着节奏切换更频繁，对注意力要求更高；单次暂停更长则侧重单次控制力；恢复方式如果是主动呼吸调整，通常比被动等待更适合进阶练习。以「阶梯计时法·进阶 30 分钟」和「双人同步寸止·默契模式」为例，前者节点 7 个、单次暂停最长 90 秒、恢复方式为计时休息；后者节点 4 个、单次暂停 60 秒、恢复方式为两人同步呼吸。前者适合个人突破，后者适合配合练习。</p>
+        </section>
+
+        <!-- 体验指南 -->
+        <section class="section-card" id="guide">
+          <div class="section-header">
+            <h2>从哪个条目开始：消费路径建议</h2>
+          </div>
+          <ol class="guide-steps">
+            <li><strong>先做一次基础测试：</strong>选择「单人专注·15 分钟无间断」，记录完成后 1—5 级的主观疲劳度。如果疲劳度在 2 级以内，可以直接从初级阶梯类条目开始；如果在 4 级以上，建议先进行 3—5 天的呼吸锚定基础练习。</li>
+            <li><strong>建立基础节奏感：</strong>用「呼吸锚定四拍循环」配合「阶梯计时法·初级 15 分钟」交替练习 3—4 天，每天 1 次，重点感受暂停后恢复节奏所需的时间。</li>
+            <li><strong>判断是否适合进阶：</strong>初级方案能连续 3 次完整完成、且恢复时间稳定在 30 秒以内，可以尝试「阶梯计时法·进阶 30 分钟」。如果连续两次无法完成进阶方案的第 5 段，退回初级巩固。</li>
+            <li><strong>引入双人模式：</strong>在有 1 周以上单人练习基础后，可以尝试「双人同步寸止·默契模式」。首次练习建议先不设时间目标，只完成 2 个同步节点，确认信号传递顺畅后再进入完整轮次。</li>
+            <li><strong>用周计划管理节奏：</strong>将不同强度的条目分配到一周的不同天，确保至少 2 天为轻量或恢复日。每周结束时对比本周与上周的疲劳度记录，判断下周是否调整参数。</li>
+          </ol>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section-card" id="faq">
+          <div class="section-header">
+            <h2>常见问题</h2>
+          </div>
+          <div class="faq-list">
+            <details>
+              <summary>寸止练习一般多久更新一次条目？</summary>
+              <div class="faq-answer">当前收录的条目更新时间集中在每周 2—3 次，通常在工作日上午和晚间各更新一条。遇到方案调整或参数修正时会标注具体修改内容。如果想跟踪最新变化，可以关注最新动态列表中的日期标记。</div>
+            </details>
+            <details>
+              <summary>阶梯计时法和匀速练习有什么区别？</summary>
+              <div class="faq-answer">阶梯计时法将总时长拆分为多个递进小段，每段之间设恢复窗口，暂停窗口逐段延长，适合逐步突破当前上限。匀速练习全程保持相同节奏，不设明显暂停节点，更侧重稳定输出和基础耐力检验。两者可以交替使用，阶梯类用于突破，匀速类用于检验。</div>
+            </details>
+            <details>
+              <summary>第一次接触应该从哪个条目开始？</summary>
+              <div class="faq-answer">建议先完成一次「单人专注·15 分钟无间断」作为基础测试，记录主观疲劳度。如果疲劳度在 2 级以内，可以直接进入「阶梯计时法·初级 15 分钟」；如果在 4 级以上，先进行 2—3 天的「呼吸锚定四拍循环」热身练习，再尝试初级阶梯方案。</div>
+            </details>
+            <details>
+              <summary>双人同步寸止需要提前约定什么？</summary>
+              <div class="faq-answer">至少需要约定一个非语言提示动作（如轻拍桌面或抬手）作为同步信号，并确认双方都能在暂停节点准确发出和接收该信号。建议首次练习只完成 2 个同步节点，确认信号传递顺畅后再进入完整轮次。另外建议提前约定一个退出信号，任何一方感到不适时可以立即中止。</div>
+            </details>
+            <details>
+              <summary>暂停窗口的长度一般怎么判断是否合适？</summary>
+              <div class="faq-answer">暂停结束后能在 30 秒内恢复稳定节奏，说明窗口长度基本合适。如果恢复后节奏明显加快或呼吸急促，说明窗口偏短，建议延长 15—30 秒；如果暂停后感到节奏松散、难以重新进入，说明窗口偏长，可以缩短 10—20 秒。连续两个练习周期都无法按当前参数完成时，建议退回上一难度。</div>
+            </details>
+            <details>
+              <summary>练习频率多高比较合适？</summary>
+              <div class="faq-answer">多数练习者的节奏是每周 4—5 次，其中 2—3 次为中等强度、2 次为轻量或恢复日。连续 3 天练习后如果疲劳自评持续在 4 级以上，建议增加 1—2 天恢复窗口。周计划类条目通常按 3 天轻量、2 天中等、2 天恢复来分配，可以作为参考起点。</div>
+            </details>
+          </div>
+        </section>
+
+        <!-- 用户评论 -->
+        <section class="section-card" id="comments">
+          <div class="section-header">
+            <h2>社区评论</h2>
+            <span class="section-note">近期讨论摘录</span>
+          </div>
+          <div class="comment-list">
+            <div class="comment-item">
+              <div class="comment-head">
+                <div class="comment-avatar">林</div>
+                <span class="comment-nick">林间慢跑</span>
+                <span class="comment-time">今天 10:22</span>
+              </div>
+              <p class="comment-body">阶梯计时法初级练了一周，暂停窗口从 60 秒加到 90 秒确实能感觉到恢复节奏更快了。不过第 4 段有时候还是会急，打算再稳两天再试进阶。</p>
+            </div>
+            <div class="comment-item">
+              <div class="comment-head">
+                <div class="comment-avatar">陈</div>
+                <span class="comment-nick">陈默的计时器</span>
+                <span class="comment-time">今天 09:05</span>
+              </div>
+              <p class="comment-body">双人同步那个默契模式，和搭档试了两次，发现非语言信号比想象中难。第一次我们约了拍手，结果节奏一快就忘，后来改成放在桌面上轻敲，好很多。</p>
+            </div>
+            <div class="comment-item">
+              <div class="comment-head">
+                <div class="comment-avatar">周</div>
+                <span class="comment-nick">周末不赶时间</span>
+                <span class="comment-time">昨天 22:40</span>
+              </div>
+              <p class="comment-body">呼吸锚定四拍循环拿来热身挺好的，直接进计时练习会有点僵。四拍屏息四秒对我来说刚好，六拍那个版本试了一次有点晕，先退回四拍了。</p>
+            </div>
+            <div class="comment-item">
+              <div class="comment-head">
+                <div class="comment-avatar">吴</div>
+                <span class="comment-nick">吴钩霜雪</span>
+                <span class="comment-time">昨天 20:15</span>
+              </div>
+              <p class="comment-body">匀速 15 分钟无间断的疲劳度量表挺实用的，我前两次都是 3 级，第三次降到 2 级之后才开始加阶梯方案。有个参考标准心里踏实很多。</p>
+            </div>
+            <div class="comment-item">
+              <div class="comment-head">
+                <div class="comment-avatar">许</div>
+                <span class="comment-nick">许愿不加班</span>
+                <span class="comment-time">昨天 18:30</span>
+              </div>
+              <p class="comment-body">周计划表下载了，但恢复日那两天我总觉得不知道该做什么。后来把呼吸锚定放到恢复日，感觉节奏比较顺，不知道大家恢复日都怎么安排。</p>
+            </div>
+            <div class="comment-item">
+              <div class="comment-head">
+                <div class="comment-avatar">赵</div>
+                <span class="comment-nick">赵小北</span>
+                <span class="comment-time">11 月 6 日 21:12</span>
+              </div>
+              <p class="comment-body">进阶 30 分钟第 6 段连续两次暂停，第一次做的时候完全没准备，节奏直接乱了。第二次按说明先延长恢复再试，勉强完成。建议第一次试的人先看一下第 6 段说明。</p>
+            </div>
+            <div class="comment-item">
+              <div class="comment-head">
+                <div class="comment-avatar">孙</div>
+                <span class="comment-nick">孙慢慢来</span>
+                <span class="comment-time">11 月 6 日 16:50</span>
+              </div>
+              <p class="comment-body">我觉得单人计时和双人同步最大的区别是注意力放的位置不一样。单人练习会更关注自己身体，双人模式一半注意力在搭档身上，反而没那么紧张。</p>
+            </div>
+            <div class="comment-item">
+              <div class="comment-head">
+                <div class="comment-avatar">李</div>
+                <span class="comment-nick">李子树下</span>
+                <span class="comment-time">11 月 5 日 19:08</span>
+              </div>
+              <p class="comment-body">暂停窗口的判断指南里说恢复时间 30 秒以内算合适，我自己测了几次基本在 40 秒左右，看来还得把窗口再拉长一点。这个参考值挺有帮助的。</p>
+            </div>
+            <div class="comment-item">
+              <div class="comment-head">
+                <div class="comment-avatar">王</div>
+                <span class="comment-nick">王不留行</span>
+                <span class="comment-time">11 月 5 日 11:33</span>
+              </div>
+              <p class="comment-body">中性意见：双人交替模式我还没试，但看说明觉得对默契要求更高，两个人轮流主导暂停节点，信号容易乱。等默契模式练熟再说吧。</p>
+            </div>
+            <div class="comment-item">
+              <div class="comment-head">
+                <div class="comment-avatar">张</div>
+                <span class="comment-nick">张弛有度</span>
+                <span class="comment-time">11 月 4 日 22:17</span>
+              </div>
+              <p class="comment-body">呼吸锚定六拍进阶确实比四拍难很多，屏息六秒到后面会不自觉加快吸气。我现在是四拍和六拍交替着来，一天四拍一天六拍，适应得还行。</p>
+            </div>
+            <div class="comment-item">
+              <div class="comment-head">
+                <div class="comment-avatar">刘</div>
+                <span class="comment-nick">刘一页</span>
+                <span class="comment-time">11 月 4 日 14:05</span>
+              </div>
+              <p class="comment-body">阶梯计时法进阶的第 5 段我卡了三天，后来按判断指南退回初级巩固了四天再试，这次过了。有些参数真的不能急，身体需要适应时间。</p>
+            </div>
+            <div class="comment-item">
+              <div class="comment-head">
+                <div class="comment-avatar">黄</div>
+                <span class="comment-nick">黄小跑</span>
+                <span class="comment-time">11 月 3 日 08:44</span>
+              </div>
+              <p class="comment-body">想问一下大家恢复日除了呼吸练习还会做什么？我目前是只做四拍循环，但感觉有点单调，想看看有没有更轻量的选择。</p>
+            </div>
+            <div class="comment-item">
+              <div class="comment-head">
+                <div class="comment-avatar">徐</div>
+                <span class="comment-nick">徐来清风</span>
+                <span class="comment-time">11 月 2 日 20:30</span>
+              </div>
+              <p class="comment-body">单人专注 15 分钟无间断对注意力要求挺高的，我中途走神两次。后来把手机静音放远一点好多了。这个条目比看起来难。</p>
+            </div>
+            <div class="comment-item">
+              <div class="comment-head">
+                <div class="comment-avatar">马</div>
+                <span class="comment-nick">马不停蹄</span>
+                <span class="comment-time">11 月 1 日 17:20</span>
+              </div>
+              <p class="comment-body">周计划的节奏分配挺好的，轻量、中等、恢复穿插着来，不会觉得某一天压力特别大。我已经按这个结构走了一周，疲劳感比之前均匀。</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 相关资讯 -->
+        <section class="section-card" id="news">
+          <div class="section-header">
+            <h2>相关资讯</h2>
+          </div>
+          <ul class="news-list">
+            <li class="news-item">
+              <div class="news-title">双人同步寸止新增交替模式，暂停节点由两人轮流主导</div>
+              <div class="news-date">2026-11-04</div>
+              <p class="news-summary">新条目「双人同步寸止·交替模式」上线，单轮 25 分钟，两人各自负责一半暂停节点的信号发出。相比默契模式，交替模式对双方的主动控制要求更均衡，适合已有同步基础的搭档尝试。</p>
+            </li>
+            <li class="news-item">
+              <div class="news-title">暂停窗口判断指南更新，新增三种常见误判场景</div>
+              <div class="news-date">2026-11-03</div>
+              <p class="news-summary">指南补充了“恢复后节奏过快”“暂停后难以重新进入”“连续两轮无法完成”三种场景的具体调整建议，并给出了窗口延长或缩短的参考秒数，方便练习者按实际情况微调。</p>
+            </li>
+            <li class="news-item">
+              <div class="news-title">呼吸锚定六拍进阶上线，面向已完成四拍循环的练习者</div>
+              <div class="news-date">2026-11-01</div>
+              <p class="news-summary">六拍循环将屏息阶段延长至 6 秒，单轮包含 6 个寸止节点。条目说明中提示：如果屏息阶段出现头晕或胸闷，应立即恢复自然呼吸并退回四拍版本，不建议强行完成。</p>
+            </li>
+            <li class="news-item">
+              <div class="news-title">社区本周讨论焦点：暂停窗口长度与练习效果的关系</div>
+              <div class="news-date">2026-10-30</div>
+              <p class="news-summary">本周社区讨论集中在“窗口越长是否效果越好”这一话题。多数参与者认为窗口长度应与当前基础匹配，过长的暂停反而会导致节奏松散。讨论中引用了判断指南里的恢复时间参考值，并分享了各自的调整记录。</p>
+            </li>
+            <li class="news-item">
+              <div class="news-title">阶梯计时法进阶 30 分钟第 6 段调整，新增连续暂停组合</div>
+              <div class="news-date">2026-10-28</div>
+              <p class="news-summary">第 6 段由原来的单次 90 秒暂停改为连续两次 90 秒暂停，中间仅间隔 30 秒恢复。条目说明中补充了呼吸节奏参考，建议在第一次尝试前先单独练习连续暂停组合。</p>
+            </li>
+            <li class="news-item">
+              <div class="news-title">周计划耐力积累表开放 11 月第二周模板，恢复日建议更具体</div>
+              <div class="news-date">2026-10-26</div>
+              <p class="news-summary">新模板在恢复日栏位中增加了“四拍循环 8 轮”和“轻量拉伸 10 分钟”两个选项，并提示恢复日不应安排任何计时类条目。打卡栏位也调整为按周汇总，方便对比每周整体节奏。</p>
+            </li>
+          </ul>
+        </section>
+
+        <!-- 相关推荐 -->
+        <section class="section-card" id="related">
+          <div class="section-header">
+            <h2>延伸方向与相关条目</h2>
+          </div>
+          <div class="related-tags">
+            <a href="/#featured" class="related-tag">双人交替模式</a>
+            <a href="/#featured" class="related-tag">呼吸锚定六拍进阶</a>
+            <a href="/#featured" class="related-tag">暂停窗口微调记录</a>
+            <a href="/#featured" class="related-tag">疲劳度自评量表</a>
+            <a href="/#featured" class="related-tag">恢复日轻量方案</a>
+            <a href="/#featured" class="related-tag">连续暂停组合练习</a>
+            <a href="/#featured" class="related-tag">周计划模板对比</a>
+            <a href="/#featured" class="related-tag">初级到进阶过渡判断</a>
+          </div>
+        </section>
+
+        <!-- 热门榜单 -->
+        <section class="section-card" id="ranking">
+          <div class="section-header">
+            <h2>本周关注度榜单</h2>
+            <span class="section-note">按条目关注数排序</span>
+          </div>
+          <ol class="ranking-list">
+            <li><span class="rank-name">阶梯计时法·初级 15 分钟</span><span class="rank-meta">关注 2.4k</span></li>
+            <li><span class="rank-name">双人同步寸止·默契模式</span><span class="rank-meta">关注 1.8k</span></li>
+            <li><span class="rank-name">呼吸锚定四拍循环</span><span class="rank-meta">关注 1.5k</span></li>
+            <li><span class="rank-name">阶梯计时法·进阶 30 分钟</span><span class="rank-meta">关注 1.3k</span></li>
+            <li><span class="rank-name">单人专注·15 分钟无间断</span><span class="rank-meta">关注 1.1k</span></li>
+            <li><span class="rank-name">周计划·耐力积累表</span><span class="rank-meta">关注 980</span></li>
+            <li><span class="rank-name">双人同步寸止·交替模式</span><span class="rank-meta">关注 760</span></li>
+            <li><span class="rank-name">呼吸锚定六拍进阶</span><span class="rank-meta">关注 620</span></li>
+          </ol>
+        </section>
+
+        <!-- 条目时间线 -->
+        <section class="section-card" id="timeline">
+          <div class="section-header">
+            <h2>近期条目上线与调整时间线</h2>
+          </div>
+          <ul class="update-list">
+            <li>
+              <span class="update-name">2026-11-08</span>
+              <span class="update-desc">阶梯计时法初级新增第 3 段暂停窗口可选调整说明；双人默契模式更新第 4 节点提示音</span>
+            </li>
+            <li>
+              <span class="update-name">2026-11-06</span>
+              <span class="update-desc">周计划耐力积累表开放 11 月第二周模板；单人专注 15 分钟新增疲劳度自评量表</span>
+            </li>
+            <li>
+              <span class="update-name">2026-11-04</span>
+              <span class="update-desc">双人同步寸止·交替模式上线</span>
+            </li>
+            <li>
+              <span class="update-name">2026-11-03</span>
+              <span class="update-desc">暂停窗口判断指南新增三种误判场景</span>
+            </li>
+            <li>
+              <span class="update-name">2026-11-01</span>
+              <span class="update-desc">呼吸锚定六拍进阶上线</span>
+            </li>
+            <li>
+              <span class="update-name">2026-10-28</span>
+              <span class="update-desc">阶梯计时法进阶第 6 段调整为连续暂停组合</span>
+            </li>
+          </ul>
+        </section>
+
+      </main>
+
+      <!-- ===== 右辅助栏 ===== -->
+      <aside class="sidebar" aria-label="辅助信息">
+        <div class="sidebar-card">
+          <h3>本周更新速览</h3>
+          <ul class="sidebar-list">
+            <li><a href="/#featured">阶梯计时法·初级 15 分钟</a><span class="side-meta">今天 09:30 · 参数调整</span></li>
+            <li><a href="/#featured">双人同步寸止·默契模式</a><span class="side-meta">今天 08:15 · 提示音更新</span></li>
+            <li><a href="/#featured">呼吸锚定四拍循环</a><span class="side-meta">昨天 21:10 · 时长修正</span></li>
+            <li><a href="/#featured">阶梯计时法·进阶 30 分钟</a><span class="side-meta">昨天 16:45 · 新增组合</span></li>
+            <li><a href="/#featured">周计划·耐力积累表</a><span class="side-meta">11 月 6 日 · 模板开放</span></li>
+          </ul>
+        </div>
+        <div class="sidebar-card">
+          <h3>分类速查</h3>
+          <ul class="sidebar-list">
+            <li><a href="/#categories">单人计时 · 12 条</a></li>
+            <li><a href="/#categories">双人配合 · 7 条</a></li>
+            <li><a href="/#categories">呼吸锚定 · 9 条</a></li>
+            <li><a href="/#categories">阶梯递进 · 6 条</a></li>
+            <li><a href="/#categories">耐力周计划 · 4 条</a></li>
+            <li><a href="/#categories">初级入门 · 11 条</a></li>
+            <li><a href="/#categories">进阶挑战 · 8 条</a></li>
+            <li><a href="/#categories">恢复与调整 · 5 条</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-card">
+          <h3>社区讨论热词</h3>
+          <ul class="sidebar-list">
+            <li><a href="/#comments">暂停窗口多长合适</a></li>
+            <li><a href="/#comments">双人信号约定方式</a></li>
+            <li><a href="/#comments">六拍呼吸适应</a></li>
+            <li><a href="/#comments">初级升进阶时机</a></li>
+            <li><a href="/#comments">恢复日安排</a></li>
+          </ul>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- ===== 页尾 ===== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">buy1take2寸止</div>
+          <p>围绕节奏控制与耐力挑战的内容聚合页，收录单人计时、双人配合、呼吸锚定与周计划类练习条目，提供条目对比、判断依据和社区讨论参考。</p>
+        </div>
+        <div class="footer-col">
+          <h4>浏览</h4>
+          <a href="/#overview">领域概览</a>
+          <a href="/#featured">精选条目</a>
+          <a href="/#updates">最新动态</a>
+          <a href="/#categories">分类入口</a>
+        </div>
+        <div class="footer-col">
+          <h4>深入</h4>
+          <a href="/#deepdive">深度解析</a>
+          <a href="/#guide">体验指南</a>
+          <a href="/#faq">常见问答</a>
+          <a href="/#comments">用户评论</a>
+        </div>
+        <div class="footer-col">
+          <h4>发现</h4>
+          <a href="/#news">相关资讯</a>
+          <a href="/#related">相关推荐</a>
+          <a href="/#ranking">热门榜单</a>
+          <a href="/#timeline">条目时间线</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 buy1take2寸止 · 内容聚合展示</span>
+        <span>部分内容为示例数据，仅用于展示页面结构</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      'use strict';
+
+      var searchInput = document.getElementById('siteSearch');
+      var searchBtn = document.getElementById('searchBtn');
+      var noResult = document.getElementById('searchNoResult');
+      var featuredSection = document.getElementById('featured');
+      var allCards = featuredSection ? featuredSection.querySelectorAll('.featured-card') : [];
+
+      function performSearch() {
+        if (!searchInput || !featuredSection) return;
+        var q = searchInput.value.trim().toLowerCase();
+        var visibleCount = 0;
+
+        allCards.forEach(function(card) {
+          var text = card.textContent.toLowerCase();
+          if (!q || text.indexOf(q) !== -1) {
+            card.style.display = '';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        if (noResult) {
+          if (visibleCount === 0 && q !== '') {
+            noResult.classList.add('visible');
+          } else {
+            noResult.classList.remove('visible');
+          }
+        }
+
+        if (q !== '') {
+          featuredSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+
+      if (searchBtn) {
+        searchBtn.addEventListener('click', performSearch);
+      }
+
+      if (searchInput) {
+        searchInput.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter') {
+            e.preventDefault();
+            performSearch();
+          }
+        });
+        searchInput.addEventListener('input', function() {
+          if (searchInput.value.trim() === '') {
+            allCards.forEach(function(card) { card.style.display = ''; });
+            if (noResult) noResult.classList.remove('visible');
+          }
+        });
+      }
+    })();
+  </script>
+
+</body>
+                  </html>
